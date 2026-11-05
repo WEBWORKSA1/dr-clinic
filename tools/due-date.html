@@ -1,0 +1,30 @@
+---
+title: "Due date calculator — how many weeks pregnant am I?"
+short: "Due date calculator"
+description: "Calculate your estimated due date from your last period or conception date, see how many weeks pregnant you are, your trimester and key prenatal dates."
+layout: tool
+tool: true
+need: womens-health
+faq:
+  - q: "How is a due date calculated?"
+    a: "The standard method adds 280 days (40 weeks) to the first day of your last menstrual period, adjusted if your cycles are longer or shorter than 28 days. From a known conception date, it adds 266 days."
+  - q: "How accurate is my due date?"
+    a: "It is an estimate. Most babies are born within about two weeks either side of it. An ultrasound in the first trimester gives the most accurate dating, and your care team may adjust your due date after it."
+---
+<form class="tool-panel" data-tool="duedate" novalidate>
+  <div class="seg" data-mode-toggle role="group" aria-label="Calculate from"><button type="button" data-mode="lmp" aria-pressed="true">First day of last period</button><button type="button" data-mode="conception" aria-pressed="false">Conception date</button></div>
+  <div class="form-row" data-modes="lmp"><label class="field"><span>First day of your last period</span><input type="date" name="lmp"></label><label class="field"><span>Usual cycle length (days)</span><input type="number" name="cycle" value="28" min="20" max="45"></label></div>
+  <div class="form-row" data-modes="conception" hidden><label class="field"><span>Conception date</span><input type="date" name="conception"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Calculate due date</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>Pregnancy at a glance</h2>
+<div class="table-wrap"><table><thead><tr><th>Stage</th><th>Weeks</th><th>Common appointments</th></tr></thead><tbody><tr><td>First trimester</td><td>0 to 13 weeks 6 days</td><td>First prenatal visit, blood tests, dating scan, first-trimester screening</td></tr><tr><td>Second trimester</td><td>14 to 27 weeks 6 days</td><td>Anatomy scan around 18–22 weeks, glucose screening around 24–28 weeks</td></tr><tr><td>Third trimester</td><td>28 weeks to birth</td><td>More frequent checks, growth monitoring, birth planning</td></tr></tbody></table></div>
+<p>Pregnancy is counted from the first day of your last period, about two weeks before conception, so at conception you are already considered “two weeks pregnant”.</p>
+<h2>Next steps</h2>
+<ul><li>Book a prenatal appointment with a doctor, midwife or obstetrician. Many people are seen first around 8 weeks.</li><li>Take a daily supplement containing folic acid (usually 400 micrograms) unless your clinician advises a different dose.</li><li>Review your medicines with a pharmacist or doctor — do not stop prescribed medicines without advice.</li></ul>
+<div class="callout warn"><p><strong>Get urgent care</strong> for heavy vaginal bleeding, severe abdominal pain, fainting, a severe headache with vision changes, fluid leaking from the vagina, or if your baby is moving less than usual later in pregnancy.</p></div>
+<p>Looking for prenatal care? <a href="/get-matched/?need=womens-health">Get matched with a women's health clinic</a>.</p>
+</div>
+{% include faq.html %}

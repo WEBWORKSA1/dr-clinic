@@ -1,0 +1,29 @@
+---
+title: "Sleep calculator — best time to go to bed or wake up"
+short: "Sleep calculator"
+description: "Find bedtimes and wake-up times that fit around 90-minute sleep cycles, so you are more likely to wake between cycles and feel refreshed."
+layout: tool
+tool: true
+need: specialist
+faq:
+  - q: "How many hours of sleep do adults need?"
+    a: "Most adults need at least 7 hours a night. Teenagers need 8 to 10 hours and school-age children 9 to 12 hours."
+  - q: "Why do I feel groggy after a full night's sleep?"
+    a: "Waking in the middle of deep sleep can cause grogginess. Regular sleep times help, but persistent tiredness despite enough sleep is worth discussing with a clinician."
+---
+<form class="tool-panel" data-tool="sleep" novalidate>
+  <div class="seg" data-mode-toggle role="group" aria-label="Mode"><button type="button" data-mode="wake" aria-pressed="true">I want to wake up at</button><button type="button" data-mode="bed" aria-pressed="false">I'm going to bed at</button><button type="button" data-mode="now" aria-pressed="false">I'm going to bed now</button></div>
+  <div class="form-row" data-modes="wake bed"><label class="field"><span>Time</span><input type="time" name="time" value="07:00"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Calculate</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How sleep cycles work</h2>
+<p>During the night you move through repeating cycles of light sleep, deep sleep and REM (dreaming) sleep. Each cycle lasts roughly 90 minutes, though it varies from about 70 to 120 minutes. Waking near the end of a cycle, rather than in deep sleep, may help you feel more alert. The calculator also allows about 15 minutes to fall asleep.</p>
+<h2>Habits that matter more than timing</h2>
+<ul><li>Keep the same wake-up time every day, including weekends.</li><li>Get daylight in the morning and dim lights in the evening.</li><li>Avoid caffeine after early afternoon and large meals or alcohol close to bedtime.</li><li>Keep your bedroom cool, dark and quiet, and keep screens out of bed.</li></ul>
+<p>Read our full guide: <a href="/health/sleep-better/">how to sleep better</a>.</p>
+<h2>When to see a clinician</h2>
+<p>Talk to your doctor about loud snoring with pauses in breathing or gasping, falling asleep during the day, trouble sleeping on most nights for three months or more, or restless, uncomfortable legs at night. These can be signs of treatable sleep disorders such as sleep apnea or insomnia.</p>
+</div>
+{% include faq.html %}

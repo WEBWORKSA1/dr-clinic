@@ -1,0 +1,39 @@
+---
+title: "Doctor visit prep builder — printable questions and symptom sheet"
+short: "Visit prep builder"
+description: "Build a one-page visit sheet with your symptoms, medicines, allergies and the right questions to ask — for new problems, follow-ups, checkups, specialists or telehealth."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "What should I bring to a doctor's appointment?"
+    a: "Bring photo ID, your insurance or health card, a list of all medicines and supplements with doses, allergies, recent test results, a short timeline of your symptoms and your questions written down."
+  - q: "Is my visit sheet stored online?"
+    a: "No. It is created in your browser and saved only on this device so you can edit it later. Nothing is sent to dr.clinic."
+---
+<form class="tool-panel" data-tool="visitprep" novalidate>
+  <div class="form-row"><label class="field"><span>Type of visit</span><select name="vtype"><option value="new">New problem</option><option value="followup">Follow-up</option><option value="checkup">Annual checkup</option><option value="specialist">Specialist visit</option><option value="telehealth">Telehealth (video) visit</option></select></label></div>
+  <label class="field"><span>Main reason for the visit *</span><textarea name="concern" placeholder="e.g. Pain in my right knee when climbing stairs"></textarea></label>
+  <div class="form-row"><label class="field"><span>When did it start?</span><input type="text" name="since" placeholder="e.g. About 3 weeks ago"></label><label class="field"><span>How often / how has it changed?</span><input type="text" name="pattern" placeholder="e.g. Daily, getting worse"></label></div>
+  <label class="field"><span>What makes it better or worse?</span><input type="text" name="helps" placeholder="e.g. Better with rest, worse after running"></label>
+  <div class="form-row"><label class="field"><span>Medicines and supplements (with doses)</span><textarea name="meds" placeholder="One per line"></textarea></label><label class="field"><span>Allergies</span><textarea name="allergies" placeholder="Medicines, foods, latex…"></textarea></label></div>
+  <label class="field"><span>Relevant history <small>(past conditions, surgeries, family history)</small></span><textarea name="history"></textarea></label>
+  <fieldset class="field"><legend class="label">Add questions</legend>
+    <label class="check"><input type="checkbox" name="q_extra" value="Are there side effects I should watch for?"><span>Are there side effects I should watch for?</span></label>
+    <label class="check"><input type="checkbox" name="q_extra" value="Are there lifestyle changes that would help?"><span>Are there lifestyle changes that would help?</span></label>
+    <label class="check"><input type="checkbox" name="q_extra" value="Should I see a specialist?"><span>Should I see a specialist?</span></label>
+    <label class="check"><input type="checkbox" name="q_extra" value="How will I get my test results, and when?"><span>How will I get my test results, and when?</span></label>
+    <label class="check"><input type="checkbox" name="q_extra" value="Can I return to work, school or exercise?"><span>Can I return to work, school or exercise?</span></label>
+  </fieldset>
+  <label class="field"><span>Your own questions <small>(one per line)</small></span><textarea name="custom"></textarea></label>
+  <button class="btn btn-accent btn-lg" type="submit">Build my visit sheet</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>Why preparing helps</h2>
+<p>Appointments are short, and it is easy to forget important details or questions under pressure. Writing them down — and leading with your most important concern — helps your clinician focus on what matters most to you. Research and patient-safety organisations consistently encourage patients to prepare questions and bring a medicine list.</p>
+<h2>During the visit</h2>
+<ul><li>Start with your main concern in one or two sentences.</li><li>Be specific about timing, severity and what you have tried.</li><li>Ask the clinician to explain any terms you do not understand.</li><li>Before leaving, repeat the plan back in your own words (“teach-back”).</li><li>Ask who to contact if things get worse, and when to follow up.</li></ul>
+<p>For a deeper guide, read <a href="/health/prepare-for-doctor-appointment/">how to prepare for a doctor's appointment</a>, or watch NPR's guide in our <a href="/videos/">video library</a>.</p>
+</div>
+{% include faq.html %}

@@ -1,0 +1,29 @@
+---
+title: "Symptom journal — track symptoms privately and export them"
+short: "Symptom journal"
+description: "Log symptoms, severity and notes in a private journal that stays on your device. Print it or download a CSV to share with your clinician."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "Where is my journal stored?"
+    a: "In your browser's local storage on this device only. It is not uploaded. Clearing your browser data deletes it, so download a CSV if you want a backup."
+  - q: "What should I record?"
+    a: "The date and time, what you felt, how severe it was on a 1–10 scale, how long it lasted, and anything that may have triggered or relieved it, such as food, activity, sleep, stress or medicines."
+---
+<form class="tool-panel" data-tool="journal" novalidate>
+  <div class="form-row"><label class="field"><span>When</span><input type="datetime-local" name="when"></label><label class="field"><span>Symptom *</span><input type="text" name="symptom" placeholder="e.g. Headache, left side"></label></div>
+  <label class="field"><span>Severity: <strong data-sev-out>5/10</strong></span><input type="range" name="severity" min="1" max="10" value="5"></label>
+  <label class="field"><span>Notes and possible triggers</span><textarea name="notes" placeholder="e.g. Lasted 2 hours, after skipping lunch, eased with rest"></textarea></label>
+  <button class="btn btn-accent btn-lg" type="submit">Add entry</button>
+  <p class="form-status" data-status aria-live="polite"></p>
+  <div data-journal style="margin-top:16px"></div>
+</form>
+<div class="prose">
+<h2>Why keep a symptom journal?</h2>
+<p>Patterns are hard to remember but easy to see on paper. A journal helps you and your clinician spot triggers, judge whether a treatment is working and decide on next steps. It is especially useful for headaches and migraine, digestive symptoms, pain, allergies, sleep problems, mood and menstrual symptoms.</p>
+<h2>Tips for a useful journal</h2>
+<ul><li>Record entries at the time, not from memory at the end of the week.</li><li>Use the same 1–10 severity scale every time.</li><li>Note medicines taken and whether they helped.</li><li>Bring the printed journal or CSV to your appointment.</li></ul>
+<div class="callout warn"><p>A journal is for tracking, not for waiting out serious symptoms. Seek urgent care for new severe symptoms, and call your emergency number for chest pain, trouble breathing or signs of stroke.</p></div>
+</div>
+{% include faq.html %}

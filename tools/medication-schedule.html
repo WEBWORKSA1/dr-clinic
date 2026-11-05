@@ -1,0 +1,36 @@
+---
+title: "Medication schedule maker — printable daily medicine timetable"
+short: "Medication schedule"
+description: "Create a simple, printable daily medicine schedule with morning, midday, evening and bedtime doses, food instructions and notes. Stored only on your device."
+layout: tool
+tool: true
+need: telehealth
+faq:
+  - q: "Can this tool tell me how to take my medicines?"
+    a: "No. It organises the instructions you already have from your prescriber or pharmacist. Always follow the label and their advice, and ask your pharmacist if anything is unclear."
+  - q: "What if I miss a dose?"
+    a: "It depends on the medicine. Check the leaflet or ask a pharmacist. Do not take a double dose to make up for a missed one unless you are told to."
+---
+<form class="tool-panel" data-tool="meds" novalidate>
+  <div class="form-row"><label class="field"><span>Medicine name *</span><input type="text" name="med" placeholder="e.g. Metformin"></label><label class="field"><span>Dose</span><input type="text" name="dose" placeholder="e.g. 500 mg, 1 tablet"></label></div>
+  <fieldset class="field"><legend class="label">When do you take it? *</legend>
+    <div class="choice-grid">
+      <label class="check"><input type="checkbox" name="slot" value="morning"><span>Morning</span></label>
+      <label class="check"><input type="checkbox" name="slot" value="midday"><span>Midday</span></label>
+      <label class="check"><input type="checkbox" name="slot" value="evening"><span>Evening</span></label>
+      <label class="check"><input type="checkbox" name="slot" value="bedtime"><span>Bedtime</span></label>
+    </div>
+  </fieldset>
+  <div class="form-row"><label class="field"><span>Food</span><select name="food"><option value="either">With or without food</option><option value="with food">With food</option><option value="before food">Before food</option><option value="empty stomach">On an empty stomach</option></select></label><label class="field"><span>Notes</span><input type="text" name="mnotes" placeholder="e.g. Avoid grapefruit"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Add medicine</button>
+  <p class="form-status" data-status aria-live="polite"></p>
+  <div data-meds style="margin-top:16px"></div>
+</form>
+<div class="prose">
+<h2>Getting the most from a medicine schedule</h2>
+<ul><li>Copy instructions exactly from the pharmacy label or prescription.</li><li>Link doses to daily habits — breakfast, brushing teeth, bedtime.</li><li>Use a weekly pill organiser alongside the printed schedule.</li><li>Include over-the-counter medicines, vitamins and herbal supplements, which can interact with prescriptions.</li><li>Bring the schedule to every appointment and to the pharmacy when you start something new.</li></ul>
+<h2>Ask your pharmacist</h2>
+<p>Pharmacists are medicine experts and are often the easiest health professional to reach. Ask them to review all of your medicines at least once a year, or whenever a new one is added, to check for interactions, duplicates and doses that could be simplified.</p>
+<div class="callout warn"><p>Never stop or change a prescribed medicine without talking to your prescriber. If you think you or someone else has taken too much of a medicine, contact your local poison control centre or emergency number straight away.</p></div>
+</div>
+{% include faq.html %}

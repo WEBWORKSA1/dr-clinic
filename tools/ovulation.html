@@ -1,0 +1,28 @@
+---
+title: "Ovulation calculator — fertile window for your next 3 cycles"
+short: "Ovulation calculator"
+description: "Estimate your ovulation day, fertile window and next periods for the next three cycles from your last period date and cycle length."
+layout: tool
+tool: true
+need: fertility
+faq:
+  - q: "When is the fertile window?"
+    a: "Pregnancy is most likely from about five days before ovulation to one day after it, because sperm can survive for several days and an egg for about a day."
+  - q: "Can I use this calculator as contraception?"
+    a: "No. Calendar estimates are not reliable enough to prevent pregnancy. Talk to a clinician about effective contraception."
+---
+<form class="tool-panel" data-tool="ovulation" novalidate>
+  <div class="form-row"><label class="field"><span>First day of your last period</span><input type="date" name="lmp"></label><label class="field"><span>Average cycle length (days)</span><input type="number" name="cycle" value="28" min="21" max="45"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Show my fertile windows</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How the estimate works</h2>
+<p>Ovulation usually happens around 14 days before your next period starts, not 14 days after the last one. So with a 28-day cycle it is around day 14, but with a 32-day cycle it is around day 18. The calculator applies this rule to your average cycle length.</p>
+<h2>Signs that can help</h2>
+<ul><li><strong>Cervical mucus</strong> often becomes clear, slippery and stretchy near ovulation.</li><li><strong>Ovulation predictor kits</strong> detect the hormone surge that comes 24–36 hours before ovulation.</li><li><strong>Basal body temperature</strong> rises slightly after ovulation, which confirms it in hindsight.</li></ul>
+<h2>When to see a fertility specialist</h2>
+<p>See a clinician if you have been trying to conceive for 12 months without success, or after 6 months if you are 35 or older. Seek advice sooner if your periods are very irregular or absent, or if you or your partner have a known condition that may affect fertility.</p>
+<p><a href="/get-matched/?need=fertility">Get matched with a fertility clinic</a> or read about <a href="/specialists/?q=fertility">fertility specialists</a>.</p>
+</div>
+{% include faq.html %}

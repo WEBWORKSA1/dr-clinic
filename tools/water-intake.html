@@ -1,0 +1,31 @@
+---
+title: "Water intake calculator — how much should I drink a day?"
+short: "Water intake"
+description: "Estimate how much fluid you need each day based on sex, exercise, hot weather, pregnancy and breastfeeding, with practical tips on staying hydrated."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "Do I really need eight glasses of water a day?"
+    a: "Needs vary. The US National Academies set adequate total water intakes of about 3.7 litres a day for men and 2.7 litres for women, from all drinks and food. About 80% usually comes from drinks."
+  - q: "Do tea and coffee count?"
+    a: "Yes. Water, milk, tea and coffee all count toward fluid intake. Water is the best everyday choice because it has no sugar or calories."
+---
+<form class="tool-panel" data-tool="water" novalidate>
+  <fieldset class="field"><legend class="label">Sex</legend><div class="choice-grid"><label class="choice compact"><input type="radio" name="sex" value="female" checked><span>Female</span></label><label class="choice compact"><input type="radio" name="sex" value="male"><span>Male</span></label></div></fieldset>
+  <div class="form-row" style="margin-top:14px"><label class="field"><span>Exercise per day (minutes)</span><input type="number" name="exercise" value="30" min="0" max="600"></label>
+  <label class="field" data-sex-only="female"><span>Pregnancy or breastfeeding</span><select name="state"><option value="none">Neither</option><option value="pregnant">Pregnant</option><option value="breastfeeding">Breastfeeding</option></select></label></div>
+  <label class="check"><input type="checkbox" name="hot" value="1"><span>I live or work in hot or humid conditions</span></label>
+  <button class="btn btn-accent btn-lg" type="submit" style="margin-top:14px">Calculate my fluids</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>Where the numbers come from</h2>
+<p>The baseline uses adequate intakes from the US National Academies of Sciences, Engineering, and Medicine: about 3.7 litres of total water a day for men, 2.7 litres for women, 3.0 litres in pregnancy and 3.8 litres while breastfeeding. We assume about 80% comes from drinks, then add roughly 0.35 litres for every 30 minutes of exercise and 0.5 litres for hot conditions.</p>
+<h2>Simple hydration habits</h2>
+<ul><li>Drink with every meal and keep a refillable bottle nearby.</li><li>Check your urine: pale yellow usually means you are drinking enough.</li><li>Drink before, during and after exercise, and more in heat.</li><li>Older adults may feel less thirsty, so planned drinks help.</li></ul>
+<div class="callout amber"><p><strong>Some people need less.</strong> If you have heart failure, kidney disease or liver disease, or take medicines that affect fluid balance, follow your clinician's fluid advice. Drinking very large amounts quickly can be dangerous.</p></div>
+<h2>Signs of dehydration</h2>
+<p>Thirst, dark urine, dry mouth, tiredness, headache and dizziness are common. Seek care for confusion, fainting, a very fast heartbeat, no urine for 8 hours or more, or dehydration in a baby or older person.</p>
+</div>
+{% include faq.html %}
