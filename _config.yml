@@ -1,0 +1,64 @@
+# dr.clinic — Care Navigator (Jekyll, built natively by GitHub Pages from the main branch)
+title: "dr.clinic"
+brand: "Care Navigator"
+tagline: "Find the right care, faster."
+description: "Free, independent care navigation: where to go for care, which specialist you need, 15 health calculators, visit-prep tools and plain-language health guides."
+url: "https://dr.clinic"
+baseurl: ""
+lang: en
+locale: en_US
+timezone: UTC
+
+adsense_client: "ca-pub-6620975821265271"
+broker_url: "https://web.works/contact"
+broker_text: "contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership"
+
+# Optional payment links for the Support page. Leave blank to show the pledge form only.
+donate:
+  paypal: ""
+  stripe: ""
+  buymeacoffee: ""
+
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  health:
+    output: true
+    permalink: /health/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "health"
+    values:
+      layout: article
+      ads: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      ads: true
+
+twitter:
+  card: summary
+
+exclude:
+  - README.md
+  - BUILD-PROMPTS.md
+  - RESEARCH.md
+  - LICENSE
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

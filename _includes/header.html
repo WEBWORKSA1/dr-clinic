@@ -1,0 +1,42 @@
+<header class="site-header" data-header>
+  <div class="container header-row">
+    <a class="logo" href="/" aria-label="dr.clinic home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="currentColor"/><path d="M26 14h12v12h12v12H38v12H26V38H14V26h12z" fill="#13b3a0"/><path d="M10 33h12l4-8 6 16 5-11 3 3h14" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo-text"><strong>dr.clinic</strong><small>Care Navigator</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="/find-care/" {% if page.url contains '/find-care' %}aria-current="page"{% endif %}>Find care</a></li>
+        <li><a href="/specialists/" {% if page.url contains '/specialists' %}aria-current="page"{% endif %}>Specialists</a></li>
+        <li><a href="/clinics/" {% if page.url contains '/clinics' %}aria-current="page"{% endif %}>Clinics</a></li>
+        <li><a href="/tools/" {% if page.url contains '/tools' %}aria-current="page"{% endif %}>Tools</a></li>
+        <li><a href="/health/" {% if page.url contains '/health' %}aria-current="page"{% endif %}>Health library</a></li>
+        <li><a href="/videos/" {% if page.url contains '/videos' %}aria-current="page"{% endif %}>Videos</a></li>
+        <li class="has-menu">
+          <button class="menu-btn" type="button" aria-expanded="false" data-menu-btn>More <svg class="ico sm" aria-hidden="true"><use href="/assets/img/icons.svg#chevron"></use></svg></button>
+          <ul class="submenu" data-menu>
+            <li><a href="/news/">Health news pulse</a></li>
+            <li><a href="/for-clinics/">For clinics</a></li>
+            <li><a href="/advertise/">Advertise &amp; sponsor</a></li>
+            <li><a href="/contests/">Contests &amp; prizes</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/support/">Support us</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="btn btn-accent nav-cta-mobile" href="/get-matched/">Get matched free</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" action="/search/" method="get" role="search">
+        <label class="sr-only" for="hq">Search dr.clinic</label>
+        <input id="hq" name="q" type="search" placeholder="Search symptoms, tools, guides" autocomplete="off">
+        <button type="submit" aria-label="Search"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#search"></use></svg></button>
+      </form>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#moon"></use></svg></button>
+      <a class="btn btn-accent header-cta" href="/get-matched/">Get matched free</a>
+      <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle aria-label="Open menu"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#menu"></use></svg></button>
+    </div>
+  </div>
+</header>

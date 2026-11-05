@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign tinfo = site.data.tools | where: "url", page.url | first %}
+<header class="page-hero tool-hero">
+  <div class="container narrow">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/tools/">Health tools</a><span aria-hidden="true">/</span><span>{{ page.short | default: page.title }}</span></nav>
+    <p class="eyebrow">{{ tinfo.category | default: 'Health tool' }} · Free · Private</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.description }}</p>
+  </div>
+</header>
+<div class="container narrow tool-body">
+{{ content }}
+  {% include lead-cta.html %}
+  <section class="related-tools">
+    <div class="section-head"><h2>More free health tools</h2><a class="link-arrow" href="/tools/">All tools</a></div>
+    <div class="grid cards-3">
+      {% assign shown = 0 %}{% for t in site.data.tools %}{% if t.url != page.url and shown < 3 %}{% if t.category == tinfo.category or shown < 1 %}{% assign shown = shown | plus: 1 %}
+      <a class="card card-link tool-mini" href="{{ t.url }}"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#{{ t.icon }}"></use></svg><h3>{{ t.name }}</h3><p>{{ t.desc }}</p></a>
+      {% endif %}{% endif %}{% endfor %}
+    </div>
+  </section>
+  {% include med-note.html %}
+  {% include share.html %}
+</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"applicationCategory":"HealthApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dr.clinic/"},{"@type":"ListItem","position":2,"name":"Health tools","item":"https://dr.clinic/tools/"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
+</script>

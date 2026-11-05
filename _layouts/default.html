@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class }}">
+<a class="skip" href="#main">Skip to main content</a>
+{% include topbar.html %}
+{% include header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+<script src="/assets/js/main.js" defer></script>
+{% if page.tool %}<script src="/assets/js/tools.js" defer></script>{% endif %}
+</body>
+</html>

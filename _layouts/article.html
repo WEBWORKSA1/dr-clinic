@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{% assign related = site.health | where: "category", page.category %}
+<article class="article">
+  <header class="page-hero article-hero">
+    <div class="container narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/health/">Health Library</a><span aria-hidden="true">/</span><span>{{ page.category }}</span></nav>
+      <p class="eyebrow">{{ page.category }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lede">{{ page.description }}</p>
+      <div class="meta">
+        <span>Updated <time datetime="{{ page.updated | date: '%Y-%m-%d' }}">{{ page.updated | date: '%B %-d, %Y' }}</time></span>
+        <span>{{ page.reading }} min read</span>
+        <span>dr.clinic editorial team</span>
+        <a href="/editorial-policy/">How we write</a>
+      </div>
+    </div>
+  </header>
+  <div class="container article-grid">
+    <aside class="toc-wrap" aria-label="On this page"><nav class="toc" data-toc></nav></aside>
+    <div class="prose">
+      {% if page.takeaways %}<div class="takeaways"><p class="takeaways-title">Key takeaways</p><ul>{% for t in page.takeaways %}<li>{{ t }}</li>{% endfor %}</ul></div>{% endif %}
+{{ content }}
+      {% include lead-cta.html %}
+      {% if page.sources %}<section class="sources"><p class="sources-title">Sources and further reading</p><ol>{% for s in page.sources %}<li><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.name }}</a></li>{% endfor %}</ol></section>{% endif %}
+      {% include med-note.html %}
+      {% include share.html %}
+    </div>
+  </div>
+  {% if related.size > 1 %}
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head"><h2>More in {{ page.category }}</h2><a class="link-arrow" href="/health/">All guides</a></div>
+      <div class="grid cards-3">
+        {% assign shown = 0 %}{% for r in related %}{% if r.url != page.url and shown < 3 %}{% assign shown = shown | plus: 1 %}
+        <a class="card card-link" href="{{ r.url }}"><span class="chip">{{ r.category }}</span><h3>{{ r.title }}</h3><p>{{ r.description }}</p><span class="link-arrow">Read guide</span></a>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalWebPage","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"dateModified":"{{ page.updated | date: '%Y-%m-%d' }}","inLanguage":"en","audience":{"@type":"PeopleAudience","audienceType":"Patient"},"publisher":{"@type":"Organization","name":"dr.clinic","url":"https://dr.clinic/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dr.clinic/"},{"@type":"ListItem","position":2,"name":"Health Library","item":"https://dr.clinic/health/"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
+</script>

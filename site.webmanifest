@@ -1,0 +1,12 @@
+{
+  "name": "dr.clinic Care Navigator",
+  "short_name": "dr.clinic",
+  "description": "Find the right care, faster. Free care navigation, health tools and guides.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#0b2239",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

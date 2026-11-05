@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+<meta name="google-adsense-account" content="{{ site.adsense_client }}">
+<meta name="theme-color" content="#0b2239">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="dr.clinic Health Library" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>try{var t=localStorage.getItem('drc-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+{% if page.ads != false %}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>{% endif %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"dr.clinic","alternateName":"dr.clinic Care Navigator","url":"https://dr.clinic/","logo":"https://dr.clinic/assets/img/favicon.svg","contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://dr.clinic/contact/"}}
+</script>
+{% if page.url == '/' %}<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"dr.clinic","url":"https://dr.clinic/","potentialAction":{"@type":"SearchAction","target":"https://dr.clinic/search/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>{% endif %}

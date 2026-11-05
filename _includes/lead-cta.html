@@ -1,0 +1,21 @@
+<section class="lead-band" aria-label="Get matched with a clinic">
+  <div class="lead-band-copy">
+    <p class="eyebrow light">Free for patients · No obligation</p>
+    <h2 class="lead-band-title">Get matched with the right clinic</h2>
+    <p>Tell us what you need and where. We send up to 3 suitable options, usually within 1–2 business days.</p>
+    <ul class="ticks"><li>Independent and free</li><li>Shared only with clinics you approve</li><li>In-person or video visits</li></ul>
+  </div>
+  <form class="mini-lead" action="/get-matched/" method="get">
+    <label>What do you need?
+      <select name="need" required>
+        <option value="">Choose a type of care</option>
+        {% for n in site.data.needs %}<option value="{{ n.id }}"{% if n.id == page.need %} selected{% endif %}>{{ n.name }}</option>{% endfor %}
+      </select>
+    </label>
+    <label>City or area
+      <input name="city" required placeholder="e.g. Toronto, Austin, Pune" autocomplete="address-level2">
+    </label>
+    <button class="btn btn-accent btn-lg" type="submit">Start my free match</button>
+    <p class="micro">About 60 seconds. Not for emergencies.</p>
+  </form>
+</section>
