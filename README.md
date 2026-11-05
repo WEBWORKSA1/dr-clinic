@@ -28,14 +28,17 @@ The site includes:
    - Request review.
 5. **Search Console:** verify the domain and submit `https://dr.clinic/sitemap.xml`.
 6. **Donations (optional):** paste PayPal / Stripe / Buy Me a Coffee links into `donate:` in `_config.yml`. The buttons appear automatically.
+7. **Daily news automation:** in GitHub, choose *Add file → Create new file*, name it `.github/workflows/update-news.yml`, and paste the contents of `scripts/update-news.yml`. It then refreshes `_data/news.json` every day from NIH, FDA and ScienceDaily via `scripts/update_news.py`, and commits only when headlines change.
 
 ## Editing content
 - **New guide:** add `_health/your-slug.md` with front matter: `title`, `description`, `category` (`Care navigation` / `Conditions` / `Everyday health`), `updated`, `reading`, `need`, `takeaways`, `sources`. It appears in the library, search, sitemap and RSS automatically.
 - **Specialties, clinic types, tools, videos, tips and monthly observances:** edit the YAML files in `_data/`.
 - **Ads on or off per page:** front matter `ads: false`. Ads are off on the funnel pages, contact, search and 404.
 
-## Automation
-`.github/workflows/update-news.yml` runs daily and refreshes `_data/news.json` from NIH, FDA and ScienceDaily RSS feeds via `scripts/update_news.py`. It commits only when headlines change, and Pages rebuilds automatically.
+## Self-updating features
+- **Tip of the day and this month's health observance:** rotate automatically in the browser.
+- **Copyright year, sitemap, RSS feed and search index:** regenerate on every commit.
+- **News headlines:** refreshed daily once the workflow above is active.
 
 ## Docs
 - `BUILD-PROMPTS.md`: strategy and the phase-wise build prompts.
