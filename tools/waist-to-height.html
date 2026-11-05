@@ -1,0 +1,30 @@
+---
+title: "Waist-to-height ratio calculator"
+short: "Waist-to-height ratio"
+description: "Check your waist-to-height ratio, a simple measure of central body fat. Keep your waist to less than half your height."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "Why does waist size matter?"
+    a: "Fat stored around the abdomen is linked more closely with type 2 diabetes, heart disease and high blood pressure than weight alone. Waist-to-height ratio captures this simply."
+  - q: "Where exactly should I measure?"
+    a: "Find the bottom of your lowest rib and the top of your hip bone. Measure halfway between them, after breathing out normally, keeping the tape level and snug."
+---
+<form class="tool-panel" data-tool="whtr" novalidate>
+  <div class="seg" data-unit-toggle role="group" aria-label="Units"><button type="button" data-unit="metric" aria-pressed="true">Centimetres</button><button type="button" data-unit="imperial" aria-pressed="false">Feet and inches</button></div>
+  <div class="form-row" data-units="metric"><label class="field"><span>Height (cm)</span><input type="number" name="h_cm" step="0.1" placeholder="170"></label><label class="field"><span>Waist (cm)</span><input type="number" name="waist_cm" step="0.1" placeholder="80"></label></div>
+  <div class="form-row" data-units="imperial" hidden><label class="field"><span>Height (ft)</span><input type="number" name="h_ft" placeholder="5"></label><label class="field"><span>Height (in)</span><input type="number" name="h_in" step="0.1" placeholder="7"></label><label class="field"><span>Waist (in)</span><input type="number" name="waist_in" step="0.1" placeholder="32"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Check my ratio</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>What the numbers mean</h2>
+<div class="table-wrap"><table><thead><tr><th>Ratio</th><th>Meaning for adults</th></tr></thead><tbody><tr><td>0.4 to 0.49</td><td>Healthy central weight</td></tr><tr><td>0.5 to 0.59</td><td>Increased health risk</td></tr><tr><td>0.6 or more</td><td>High health risk</td></tr></tbody></table></div>
+<p>These categories come from UK NICE guidance, which recommends that adults keep their waist to less than half their height. They work for adults of all ethnicities and both sexes, which makes the ratio easier to use than waist cut-offs alone.</p>
+<h2>Using it with BMI</h2>
+<p>Waist-to-height ratio adds information that <a href="/tools/bmi/">BMI</a> misses. Someone with a “healthy” BMI can still carry risky central fat, and a muscular person with a high BMI may have a healthy ratio.</p>
+<h2>What helps</h2>
+<p>Regular activity, fewer sugary drinks and ultra-processed foods, more fibre, enough sleep and limiting alcohol all help reduce waist size over time. If your ratio is 0.5 or more, ask your doctor about checking your blood pressure, blood sugar and cholesterol.</p>
+</div>
+{% include faq.html %}

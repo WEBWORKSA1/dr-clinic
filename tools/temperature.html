@@ -1,0 +1,29 @@
+---
+title: "Fever and temperature converter — °C to °F and when to call a doctor"
+short: "Fever & temperature"
+description: "Convert body temperature between Celsius and Fahrenheit, see whether it counts as a fever, and know when adults, children and babies need medical advice."
+layout: tool
+tool: true
+need: telehealth
+faq:
+  - q: "What temperature is a fever?"
+    a: "For adults and children, a temperature of 38°C (100.4°F) or higher is generally considered a fever."
+  - q: "When should a baby with a fever see a doctor?"
+    a: "Get urgent medical advice for a baby under 3 months with a temperature of 38°C (100.4°F) or higher, or a baby aged 3 to 6 months with 39°C (102.2°F) or higher. For any child who seems very unwell, floppy, hard to wake or has a rash that does not fade when pressed, seek emergency care."
+---
+<form class="tool-panel" data-tool="temp" novalidate>
+  <div class="form-row"><label class="field"><span>Temperature</span><input type="number" name="temp" inputmode="decimal" step="0.1" placeholder="38.2"></label>
+  <fieldset class="field"><legend class="label">Unit</legend><div class="choice-grid"><label class="choice compact"><input type="radio" name="tunit" value="C" checked><span>°C</span></label><label class="choice compact"><input type="radio" name="tunit" value="F"><span>°F</span></label></div></fieldset></div>
+  <button class="btn btn-accent btn-lg" type="submit">Convert and check</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>Temperature guide for adults</h2>
+<div class="table-wrap"><table><thead><tr><th>°C</th><th>°F</th><th>What it usually means</th></tr></thead><tbody><tr><td>Below 35.0</td><td>Below 95.0</td><td>Low body temperature — seek urgent help</td></tr><tr><td>36.1 – 37.4</td><td>97.0 – 99.3</td><td>Typical range</td></tr><tr><td>37.5 – 37.9</td><td>99.5 – 100.2</td><td>Slightly raised</td></tr><tr><td>38.0 – 39.3</td><td>100.4 – 102.7</td><td>Fever</td></tr><tr><td>39.4 or higher</td><td>103.0 or higher</td><td>High fever — call a doctor</td></tr></tbody></table></div>
+<h2>Measuring properly</h2>
+<p>Use a digital thermometer. Oral readings are reliable for adults if you have not eaten or drunk anything hot or cold for 15 minutes. Armpit readings run slightly lower. Ear and forehead thermometers are convenient but more affected by technique. For babies, follow your clinician's advice on the best method.</p>
+<h2>Looking after a fever at home</h2>
+<p>Rest, drink plenty of fluids and wear light clothing. Fever-reducing medicines such as paracetamol (acetaminophen) or ibuprofen can make you more comfortable — follow the label and ask a pharmacist if you take other medicines or have health conditions.</p>
+<div class="callout warn"><p><strong>Seek urgent care</strong> for a fever with a stiff neck, severe headache, confusion, a rash that does not fade when pressed, trouble breathing, chest pain, seizures, or if you have a weakened immune system. Read more in our guide to <a href="/health/fever-in-adults/">fever in adults</a>.</p></div>
+</div>
+{% include faq.html %}

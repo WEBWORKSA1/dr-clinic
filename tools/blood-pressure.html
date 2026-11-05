@@ -1,0 +1,30 @@
+---
+title: "Blood pressure checker and log — what does my reading mean?"
+short: "Blood pressure checker"
+description: "Enter a blood pressure reading to see its category, what to do next and when to seek urgent care. Keep a private log of readings and averages on your device."
+layout: tool
+tool: true
+need: cardiology
+faq:
+  - q: "What is a normal blood pressure?"
+    a: "For adults, a reading below 120/80 mmHg is generally considered normal. Readings of 130/80 or higher are classed as high blood pressure under US guidelines, while some other countries use 140/90 for clinic readings."
+  - q: "When is blood pressure dangerously high?"
+    a: "A reading of 180/120 or higher is severe. Re-check after five minutes. If it stays that high, contact a doctor immediately, and call your emergency number if you have chest pain, shortness of breath, back pain, numbness or weakness, vision changes or difficulty speaking."
+---
+<form class="tool-panel" data-tool="bp" novalidate>
+  <div class="form-row"><label class="field"><span>Systolic (top number)</span><input type="number" name="sys" inputmode="numeric" placeholder="120"></label><label class="field"><span>Diastolic (bottom number)</span><input type="number" name="dia" inputmode="numeric" placeholder="80"></label><label class="field"><span>Pulse (optional)</span><input type="number" name="pulse" inputmode="numeric" placeholder="70"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Check and save reading</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+  <div data-bp-log style="margin-top:18px"></div>
+</form>
+<div class="prose">
+<h2>Blood pressure categories (adults)</h2>
+<div class="table-wrap"><table><thead><tr><th>Category</th><th>Systolic (mmHg)</th><th></th><th>Diastolic (mmHg)</th></tr></thead><tbody><tr><td>Normal</td><td>Less than 120</td><td>and</td><td>Less than 80</td></tr><tr><td>Elevated</td><td>120–129</td><td>and</td><td>Less than 80</td></tr><tr><td>Stage 1 high blood pressure</td><td>130–139</td><td>or</td><td>80–89</td></tr><tr><td>Stage 2 high blood pressure</td><td>140 or higher</td><td>or</td><td>90 or higher</td></tr><tr><td>Severe — contact a doctor now</td><td>180 or higher</td><td>and/or</td><td>120 or higher</td></tr></tbody></table></div>
+<p class="micro">Based on American Heart Association / American College of Cardiology categories. Guidelines in other countries differ slightly.</p>
+<h2>How to measure accurately at home</h2>
+<ol><li>Avoid caffeine, exercise and smoking for 30 minutes before.</li><li>Empty your bladder, then sit quietly for five minutes with your back supported and feet flat.</li><li>Rest your arm on a table at heart level and use a cuff that fits your upper arm on bare skin.</li><li>Do not talk. Take two readings one minute apart and record both.</li><li>Measure at the same times each day — for example morning and evening — for a week before an appointment.</li></ol>
+<h2>Why one reading is not enough</h2>
+<p>Blood pressure changes minute to minute with stress, activity and even talking. Diagnosis is based on the average of several readings on different days. Our log keeps your last readings on this device so you can show the average to your clinician.</p>
+<p>Watch Cleveland Clinic's short explainer on home monitoring in our <a href="/videos/">video library</a>, and read our guide to <a href="/health/high-blood-pressure/">high blood pressure</a>.</p>
+</div>
+{% include faq.html %}

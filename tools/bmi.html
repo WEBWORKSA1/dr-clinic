@@ -1,0 +1,31 @@
+---
+title: "BMI calculator — body mass index with healthy-weight range"
+short: "BMI calculator"
+description: "Calculate your body mass index in metric or US units, see your category on a visual scale and the healthy-weight range for your height."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "What is a healthy BMI for adults?"
+    a: "For most adults, a BMI from 18.5 to 24.9 is considered a healthy weight range. 25 to 29.9 is overweight and 30 or above is in the obesity range. Some guidelines use lower thresholds (23 and 27.5) for people of South Asian, Chinese and other Asian backgrounds."
+  - q: "Is BMI accurate?"
+    a: "BMI is a quick screening tool, not a diagnosis. It does not measure body fat directly, so it can overestimate fat in muscular people and underestimate it in older adults. Waist measurement adds useful information."
+---
+<form class="tool-panel" data-tool="bmi" novalidate>
+  <div class="seg" data-unit-toggle role="group" aria-label="Units"><button type="button" data-unit="metric" aria-pressed="true">Metric (cm, kg)</button><button type="button" data-unit="imperial" aria-pressed="false">US (ft, in, lb)</button></div>
+  <div class="form-row" data-units="metric"><label class="field"><span>Height (cm)</span><input type="number" name="h_cm" inputmode="decimal" step="0.1" placeholder="170"></label><label class="field"><span>Weight (kg)</span><input type="number" name="w_kg" inputmode="decimal" step="0.1" placeholder="70"></label></div>
+  <div class="form-row" data-units="imperial" hidden><label class="field"><span>Height (feet)</span><input type="number" name="h_ft" inputmode="numeric" placeholder="5"></label><label class="field"><span>Height (inches)</span><input type="number" name="h_in" inputmode="decimal" step="0.1" placeholder="7"></label><label class="field"><span>Weight (lb)</span><input type="number" name="w_lb" inputmode="decimal" step="0.1" placeholder="154"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Calculate BMI</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How BMI is calculated</h2>
+<p>Body mass index is your weight in kilograms divided by your height in metres squared (kg/m²). In US units the formula is weight in pounds × 703 ÷ height in inches squared. It was designed to compare weight across large groups of people, and it remains a simple first check for individuals.</p>
+<h2>Adult BMI categories</h2>
+<div class="table-wrap"><table><thead><tr><th>BMI</th><th>Category (WHO)</th><th>Lower action points often used for Asian populations</th></tr></thead><tbody><tr><td>Below 18.5</td><td>Underweight</td><td>Below 18.5</td></tr><tr><td>18.5 – 24.9</td><td>Healthy weight</td><td>18.5 – 22.9</td></tr><tr><td>25 – 29.9</td><td>Overweight</td><td>23 – 27.4</td></tr><tr><td>30 and above</td><td>Obesity</td><td>27.5 and above</td></tr></tbody></table></div>
+<h2>What BMI does not tell you</h2>
+<ul><li>Where fat is stored. Fat around the waist carries more health risk — check your <a href="/tools/waist-to-height/">waist-to-height ratio</a>.</li><li>Muscle versus fat. Athletes can have a high BMI with low body fat.</li><li>Children and teens, who need age- and sex-specific BMI percentiles, and pregnant people.</li></ul>
+<h2>When to talk to a clinician</h2>
+<p>Talk to your doctor if your BMI is under 18.5 or 30 and above, if your weight has changed a lot without trying, or if you would like support with weight. A clinician can look at blood pressure, blood sugar, cholesterol and family history alongside BMI.</p>
+</div>
+{% include faq.html %}

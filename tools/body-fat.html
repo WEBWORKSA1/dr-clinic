@@ -1,0 +1,37 @@
+---
+title: "Body fat calculator — US Navy tape-measure method"
+short: "Body fat calculator"
+description: "Estimate body fat percentage from height, neck, waist and hip measurements using the US Navy method, with fat and lean mass and typical ranges."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "How do I measure correctly?"
+    a: "Use a flexible tape, keep it level and snug without compressing the skin. Measure the neck just below the larynx, the waist at the navel for men or at the narrowest point for women, and the hips at the widest point. Measure twice and use the average."
+  - q: "Is the Navy method as good as a DEXA scan?"
+    a: "No. DEXA and other lab methods are more precise. The Navy method is a practical estimate that is useful for tracking change over time when you measure the same way each time."
+---
+<form class="tool-panel" data-tool="bodyfat" novalidate>
+  <fieldset class="field"><legend class="label">Sex</legend><div class="choice-grid"><label class="choice compact"><input type="radio" name="sex" value="female" checked><span>Female</span></label><label class="choice compact"><input type="radio" name="sex" value="male"><span>Male</span></label></div></fieldset>
+  <div class="seg" data-unit-toggle role="group" aria-label="Units" style="margin-top:14px"><button type="button" data-unit="metric" aria-pressed="true">Centimetres</button><button type="button" data-unit="imperial" aria-pressed="false">Inches</button></div>
+  <div data-units="metric">
+    <div class="form-row"><label class="field"><span>Height (cm)</span><input type="number" name="h_cm" step="0.1" placeholder="165"></label><label class="field"><span>Neck (cm)</span><input type="number" name="neck_cm" step="0.1" placeholder="33"></label><label class="field"><span>Waist (cm)</span><input type="number" name="waist_cm" step="0.1" placeholder="76"></label></div>
+    <div class="form-row"><label class="field" data-sex-only="female"><span>Hips (cm)</span><input type="number" name="hip_cm" step="0.1" placeholder="98"></label><label class="field"><span>Weight (kg, optional)</span><input type="number" name="w_kg" step="0.1" placeholder="65"></label></div>
+  </div>
+  <div data-units="imperial" hidden>
+    <div class="form-row"><label class="field"><span>Height (ft)</span><input type="number" name="h_ft" placeholder="5"></label><label class="field"><span>Height (in)</span><input type="number" name="h_in" step="0.1" placeholder="5"></label><label class="field"><span>Neck (in)</span><input type="number" name="neck_in" step="0.1" placeholder="13"></label><label class="field"><span>Waist (in)</span><input type="number" name="waist_in" step="0.1" placeholder="30"></label></div>
+    <div class="form-row"><label class="field" data-sex-only="female"><span>Hips (in)</span><input type="number" name="hip_in" step="0.1" placeholder="38.5"></label><label class="field"><span>Weight (lb, optional)</span><input type="number" name="w_lb" step="0.1" placeholder="143"></label></div>
+  </div>
+  <button class="btn btn-accent btn-lg" type="submit">Estimate body fat</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How the US Navy method works</h2>
+<p>The method, developed by the US Naval Health Research Center, estimates body fat from circumference measurements and height. Men's estimates use the waist and neck; women's use the waist, hips and neck, because women tend to store more fat around the hips.</p>
+<h2>Typical body fat ranges</h2>
+<div class="table-wrap"><table><thead><tr><th>Description</th><th>Women</th><th>Men</th></tr></thead><tbody><tr><td>Essential fat</td><td>10–13%</td><td>2–5%</td></tr><tr><td>Athletes</td><td>14–20%</td><td>6–13%</td></tr><tr><td>Fitness</td><td>21–24%</td><td>14–17%</td></tr><tr><td>Average</td><td>25–31%</td><td>18–24%</td></tr><tr><td>Above average</td><td>32% and above</td><td>25% and above</td></tr></tbody></table></div>
+<p class="micro">Ranges commonly published by the American Council on Exercise. Healthy ranges also vary with age.</p>
+<h2>Getting reliable numbers</h2>
+<p>Measure in the morning before eating, wear light clothing or none, and stand relaxed. Track the trend every 2–4 weeks rather than reacting to a single number. If you are concerned about weight loss or gain you did not expect, see your doctor.</p>
+</div>
+{% include faq.html %}

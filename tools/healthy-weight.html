@@ -1,0 +1,31 @@
+---
+title: "Healthy weight range calculator for your height"
+short: "Healthy weight range"
+description: "Find a realistic healthy-weight range for your height, plus classic ideal body weight formulas (Devine, Robinson, Miller) used in medicine."
+layout: tool
+tool: true
+need: primary-care
+faq:
+  - q: "Is there one ideal weight for my height?"
+    a: "No. A healthy weight is a range, not a single number. Muscle mass, body frame, age, ethnicity and overall health all matter."
+  - q: "Why are ideal body weight formulas still used?"
+    a: "Formulas such as Devine's are used in hospitals to estimate doses of some medicines and ventilator settings. They were never meant to be personal weight goals."
+---
+<form class="tool-panel" data-tool="healthyweight" novalidate>
+  <fieldset class="field"><legend class="label">Sex</legend><div class="choice-grid"><label class="choice compact"><input type="radio" name="sex" value="female" checked><span>Female</span></label><label class="choice compact"><input type="radio" name="sex" value="male"><span>Male</span></label></div></fieldset>
+  <div class="seg" data-unit-toggle role="group" aria-label="Units" style="margin-top:14px"><button type="button" data-unit="metric" aria-pressed="true">Metric</button><button type="button" data-unit="imperial" aria-pressed="false">US units</button></div>
+  <div class="form-row" data-units="metric"><label class="field"><span>Height (cm)</span><input type="number" name="h_cm" step="0.1" placeholder="170"></label></div>
+  <div class="form-row" data-units="imperial" hidden><label class="field"><span>Height (feet)</span><input type="number" name="h_ft" placeholder="5"></label><label class="field"><span>Height (inches)</span><input type="number" name="h_in" step="0.1" placeholder="7"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Show my range</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How we work out the range</h2>
+<p>The healthy-weight range shown first is the weight that would give a body mass index between 18.5 and 24.9 at your height — the range the World Health Organization uses for adults. It is broad on purpose: people of the same height can be healthy at quite different weights.</p>
+<h2>The classic formulas</h2>
+<ul><li><strong>Devine (1974):</strong> 50 kg (men) or 45.5 kg (women) plus 2.3 kg per inch over 5 feet.</li><li><strong>Robinson (1983):</strong> 52 kg (men) or 49 kg (women) plus 1.9 kg or 1.7 kg per inch over 5 feet.</li><li><strong>Miller (1983):</strong> 56.2 kg (men) or 53.1 kg (women) plus 1.41 kg or 1.36 kg per inch over 5 feet.</li></ul>
+<p>These were created for clinical calculations, not to define how anyone should look. They are least reliable for people shorter than 5 feet (152 cm).</p>
+<h2>Better questions than “what should I weigh?”</h2>
+<p>Is your waist less than half your height? Are your blood pressure, blood sugar and cholesterol in healthy ranges? Can you do the activities you enjoy? Your clinician can help you look at the whole picture.</p>
+</div>
+{% include faq.html %}

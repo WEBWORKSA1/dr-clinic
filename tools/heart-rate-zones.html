@@ -1,0 +1,28 @@
+---
+title: "Heart rate zones calculator — target heart rate for exercise"
+short: "Heart rate zones"
+description: "Find your estimated maximum heart rate and five training zones, with optional resting heart rate for the more personal Karvonen method."
+layout: tool
+tool: true
+need: cardiology
+faq:
+  - q: "What is a good target heart rate for moderate exercise?"
+    a: "The US CDC describes moderate-intensity activity as roughly 64% to 76% of your maximum heart rate, and vigorous activity as roughly 77% to 93%."
+  - q: "How do I find my resting heart rate?"
+    a: "Count your pulse for 60 seconds after waking, before getting out of bed, on three mornings, and use the average. Many watches estimate it automatically."
+---
+<form class="tool-panel" data-tool="heartrate" novalidate>
+  <div class="form-row"><label class="field"><span>Age (years)</span><input type="number" name="age" inputmode="numeric" placeholder="40"></label><label class="field"><span>Resting heart rate (optional, bpm)</span><input type="number" name="rest" inputmode="numeric" placeholder="65"></label></div>
+  <button class="btn btn-accent btn-lg" type="submit">Show my zones</button>
+  <div class="result" data-result hidden aria-live="polite"></div>
+</form>
+<div class="prose">
+<h2>How the zones are calculated</h2>
+<p>Maximum heart rate is estimated as 220 minus your age. We also show the Tanaka estimate (208 − 0.7 × age), which some research finds more accurate for older adults. If you enter a resting heart rate, zones use the Karvonen method, which applies each percentage to your heart-rate reserve (maximum minus resting) and then adds your resting rate back.</p>
+<h2>The five zones</h2>
+<ul><li><strong>Zone 1 (50–60%):</strong> very light — warm-ups and recovery.</li><li><strong>Zone 2 (60–70%):</strong> light — you can hold a conversation; builds endurance.</li><li><strong>Zone 3 (70–80%):</strong> moderate — breathing harder, short sentences.</li><li><strong>Zone 4 (80–90%):</strong> hard — only a few words at a time.</li><li><strong>Zone 5 (90–100%):</strong> maximum — short intervals for trained people.</li></ul>
+<h2>How much exercise?</h2>
+<p>Global and national guidelines recommend that adults get at least 150–300 minutes of moderate activity, or 75–150 minutes of vigorous activity, each week, plus muscle-strengthening activity on two or more days.</p>
+<div class="callout warn"><p><strong>Stop and seek help</strong> if you get chest pain, severe breathlessness, fainting or palpitations during exercise. If you have a heart condition, take heart-rate-lowering medicines such as beta-blockers, or are starting exercise after a long break, check with your clinician first.</p></div>
+</div>
+{% include faq.html %}
