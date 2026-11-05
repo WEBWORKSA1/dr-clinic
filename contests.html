@@ -1,0 +1,81 @@
+---
+title: "Health contests and prizes — challenges, explainer awards and Clinic Heroes"
+short: "Contests"
+description: "Join dr.clinic contests: the 30-Day Know Your Numbers Challenge, the Explain It Simply health explainer contest and the Clinic Hero Awards. Sponsor-funded prizes."
+eyebrow: "Contests &amp; prizes"
+heading: "Contests that make health a little more fun"
+lede: "Build healthy habits, explain health clearly, and celebrate the people who make care better. Prizes are funded by sponsors and supporters."
+faq:
+  - q: "Do I have to pay to enter?"
+    a: "No. No purchase or payment is ever required to enter or win, and paying would not improve your chances."
+  - q: "Who can enter?"
+    a: "Adults aged 18 or older, unless a contest's official rules say otherwise. Some contests may be limited to certain countries where local rules allow. Void where prohibited."
+  - q: "How are winners chosen?"
+    a: "Each contest publishes its judging criteria before it opens. Skill-based contests are judged by a panel against those criteria; challenges reward completion rather than luck."
+  - q: "Can my company sponsor a prize?"
+    a: "Yes. Sponsors are credited on the contest page and in winner announcements. Sponsors never judge entries or influence health content."
+---
+{% include page-hero.html %}
+<section class="section tight">
+  <div class="container grid cards-3">
+    <article class="card">
+      <span class="chip">Challenge · Opens monthly</span>
+      <h3>30-Day Know Your Numbers Challenge</h3>
+      <p>Learn five numbers that matter — blood pressure, waist-to-height ratio, resting heart rate, sleep hours and daily activity — and log them for 30 days with our free tools.</p>
+      <p><strong>Prizes:</strong> sponsor-funded gift cards and health gear for finishers, drawn from completed challenges.</p>
+      <a class="link-arrow" href="#enter" data-pick="30-Day Know Your Numbers Challenge" data-pick-target="#contest">Join the challenge</a>
+    </article>
+    <article class="card">
+      <span class="chip warm">Skill contest · Quarterly</span>
+      <h3>Explain It Simply</h3>
+      <p>Make a 60–120 second video or a 600-word article that explains one health topic clearly and accurately. Students, creators and clinicians welcome.</p>
+      <p><strong>Judged on:</strong> accuracy, clarity, usefulness and creativity. <strong>Prizes:</strong> cash prizes plus publication on dr.clinic.</p>
+      <a class="link-arrow" href="#enter" data-pick="Explain It Simply" data-pick-target="#contest">Submit an entry</a>
+    </article>
+    <article class="card">
+      <span class="chip alt">Awards · Yearly</span>
+      <h3>Clinic Hero Awards</h3>
+      <p>Nominate a clinic team, nurse, receptionist, pharmacist or doctor who made a real difference to you or your community.</p>
+      <p><strong>Recognition:</strong> featured story on dr.clinic, a certificate and a sponsor-funded team prize.</p>
+      <a class="link-arrow" href="#enter" data-pick="Clinic Hero Awards (nomination)" data-pick-target="#contest">Nominate a hero</a>
+    </article>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container split">
+    <form class="form-card form" id="enter" data-form="contest" data-subject="Contest entry or interest — dr.clinic">
+      <h2 style="font-size:1.5rem;margin:0">Enter, nominate or get notified</h2>
+      <label class="field"><span>Contest *</span><select name="contest" id="contest" required><option>30-Day Know Your Numbers Challenge</option><option>Explain It Simply</option><option>Clinic Hero Awards (nomination)</option><option>Notify me about new contests</option></select></label>
+      <div class="form-row">
+        <label class="field"><span>Name *</span><input type="text" name="name" required autocomplete="name"></label>
+        <label class="field"><span>Email *</span><input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <label class="field"><span>Country *</span><input type="text" name="country" required autocomplete="country-name"></label>
+      <label class="field"><span>Entry link or nominee <small>(video or document link, or who you are nominating)</small></span><input type="text" name="entry"></label>
+      <label class="field"><span>Tell us more</span><textarea name="message" placeholder="Your topic, or why your nominee deserves recognition"></textarea></label>
+      <label class="check"><input type="checkbox" name="adult" value="Yes" required><span>I am 18 or older. *</span></label>
+      <label class="check"><input type="checkbox" name="rules" value="Yes" required><span>I agree to the contest rules below and confirm my entry is my own original work. *</span></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="form" value="Contest">
+      <button class="btn btn-accent btn-lg" type="submit">Send</button>
+      <p class="form-status" data-status aria-live="polite"></p>
+    </form>
+    <div>
+      <h2>Contest rules — key terms</h2>
+      <ul>
+        <li><strong>No purchase necessary.</strong> Payment never increases your chances of winning.</li>
+        <li><strong>Eligibility:</strong> 18 or older; employees of dr.clinic and of a contest's sponsors, and their households, are not eligible. Void where prohibited or restricted by law.</li>
+        <li><strong>Official rules first:</strong> each contest publishes full official rules — dates, eligible countries, prize description and approximate value, judging criteria and odds where relevant — before entries open. Those official rules take priority over this summary.</li>
+        <li><strong>One entry</strong> per person per contest round unless the official rules say otherwise.</li>
+        <li><strong>Winners</strong> are contacted by email and must respond within 14 days, or an alternate may be selected. Where required by law, winners may need to answer a skill-testing question.</li>
+        <li><strong>Prizes</strong> are non-transferable. We may substitute a prize of equal or greater value. Winners are responsible for any taxes.</li>
+        <li><strong>Your content:</strong> you keep ownership of your entry and grant dr.clinic a non-exclusive licence to display it with credit.</li>
+        <li><strong>Health safety:</strong> challenges are for generally healthy adults. Check with your clinician before changing your activity if you have a medical condition.</li>
+        <li><strong>Privacy:</strong> entry details are used to run the contest. See our <a href="/privacy/">privacy policy</a>.</li>
+      </ul>
+      <div class="callout"><p><strong>Want to sponsor a prize?</strong> Your brand is credited on the contest page and winner announcements. <a href="/advertise/">Sponsor a contest</a> or <a href="/support/">fund a prize</a>.</p></div>
+    </div>
+  </div>
+</section>
+{% include faq.html %}

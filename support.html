@@ -1,0 +1,92 @@
+---
+title: "Support dr.clinic — keep free care navigation free"
+short: "Support us"
+description: "Contribute to dr.clinic. Your support funds operations, promotion and outreach, hiring writers and clinical reviewers, and community contests and prizes."
+eyebrow: "Support"
+heading: "Keep free care navigation free"
+lede: "dr.clinic is independent. Supporters fund the servers, the writing, the outreach and the prizes that keep this service useful and free for everyone."
+ads: false
+faq:
+  - q: "Is my contribution tax-deductible?"
+    a: "No. dr.clinic is not a registered charity, so contributions are not tax-deductible. They are voluntary support for an independent service."
+  - q: "How do I pay?"
+    a: "Use one of the payment buttons on this page when available, or send the pledge form and we will reply with a secure payment link. We never ask for card details by email."
+  - q: "Can I choose where my money goes?"
+    a: "Yes. Choose operations, promotion and marketing, hiring talent, or contests and prizes in the pledge form, or leave it unrestricted so we can put it where it is needed most."
+  - q: "Does supporting dr.clinic affect what you publish?"
+    a: "No. Supporters, sponsors and advertisers have no say over our health guides or recommendations."
+---
+{% include page-hero.html %}
+<section class="section tight">
+  <div class="container split">
+    <div>
+      <h2>Where support goes</h2>
+      <p>Every contribution is split across the work that keeps dr.clinic running and growing. These are our target allocations for unrestricted support.</p>
+      <div class="alloc" style="margin-top:20px">
+        <div class="alloc-row"><span>Ongoing operations</span><div class="bar"><i style="width:35%"></i></div><span>35%</span></div>
+        <div class="alloc-row"><span>Hiring talent</span><div class="bar"><i style="width:25%"></i></div><span>25%</span></div>
+        <div class="alloc-row"><span>Promotion &amp; marketing</span><div class="bar"><i style="width:20%"></i></div><span>20%</span></div>
+        <div class="alloc-row"><span>Contests &amp; prizes</span><div class="bar"><i style="width:20%"></i></div><span>20%</span></div>
+      </div>
+      <div class="grid cards-2" style="margin-top:28px">
+        <div class="card"><h3>Ongoing operations</h3><p>Hosting, security, tools, accessibility testing and keeping every calculator accurate.</p></div>
+        <div class="card"><h3>Hiring talent</h3><p>Paying medical writers, licensed clinical reviewers, video creators and developers.</p></div>
+        <div class="card"><h3>Promotion &amp; marketing</h3><p>Reaching people who need to know where to go — especially in underserved communities.</p></div>
+        <div class="card"><h3>Contests &amp; prizes</h3><p>Funding prizes for healthy-habit challenges, explainer contests and Clinic Hero awards.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="form-card">
+        <h2 style="font-size:1.5rem;margin:0 0 6px">Choose your support</h2>
+        <p class="micro" style="margin-top:0">Amounts in USD. One-time or monthly.</p>
+        <div class="seg" data-amounts="#amount" role="group" aria-label="Amount">
+          <button type="button" data-value="5" aria-pressed="false">$5</button>
+          <button type="button" data-value="15" aria-pressed="true">$15</button>
+          <button type="button" data-value="50" aria-pressed="false">$50</button>
+          <button type="button" data-value="250" aria-pressed="false">$250</button>
+          <button type="button" data-value="1000" aria-pressed="false">$1,000</button>
+        </div>
+        {% if site.donate.paypal != "" or site.donate.stripe != "" or site.donate.buymeacoffee != "" %}
+        <div class="tool-actions" style="margin-bottom:18px">
+          {% if site.donate.stripe != "" %}<a class="btn btn-accent" href="{{ site.donate.stripe }}" target="_blank" rel="noopener">Give by card</a>{% endif %}
+          {% if site.donate.paypal != "" %}<a class="btn btn-brand" href="{{ site.donate.paypal }}" target="_blank" rel="noopener">PayPal</a>{% endif %}
+          {% if site.donate.buymeacoffee != "" %}<a class="btn btn-ghost" href="{{ site.donate.buymeacoffee }}" target="_blank" rel="noopener">Buy us a coffee</a>{% endif %}
+        </div>
+        <p class="micro">Prefer an invoice, a bank transfer or to restrict your gift? Use the pledge form.</p>
+        {% endif %}
+        <form class="form" data-form="support" data-subject="Support pledge — dr.clinic">
+          <div class="form-row">
+            <label class="field"><span>Amount (USD) *</span><input type="number" id="amount" name="amount" min="1" step="1" value="15" required></label>
+            <label class="field"><span>Frequency</span><select name="frequency"><option>One-time</option><option>Monthly</option><option>Yearly</option></select></label>
+          </div>
+          <label class="field"><span>Direct my support to</span><select name="allocation" id="allocation"><option>Where it is needed most</option><option>Ongoing operations</option><option>Promotion &amp; marketing</option><option>Hiring talent</option><option>Contests &amp; prizes</option></select></label>
+          <div class="form-row">
+            <label class="field"><span>Name *</span><input type="text" name="name" required autocomplete="name"></label>
+            <label class="field"><span>Email *</span><input type="email" name="email" required autocomplete="email"></label>
+          </div>
+          <label class="field"><span>Supporters wall</span><select name="recognition"><option>Show my name</option><option>Show my company name</option><option>Keep me anonymous</option></select></label>
+          <label class="field"><span>Message (optional)</span><textarea name="message" placeholder="Anything you would like us to know"></textarea></label>
+          <label class="check"><input type="checkbox" name="understand" value="Yes" required><span>I understand dr.clinic is not a charity and contributions are not tax-deductible. *</span></label>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="form" value="Support pledge">
+          <button class="btn btn-accent btn-lg" type="submit">Send my pledge</button>
+          <p class="micro">We reply with a secure payment link from a trusted payment provider. We never ask for card numbers by email.</p>
+          <p class="form-status" data-status aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Ways to make a bigger difference</h2></div></div>
+    <div class="grid cards-4">
+      <div class="card"><div class="icon-tile warm"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#gift"></use></svg></div><h3>Sponsor a prize</h3><p>Fund a contest prize and get credited on the contest page and winner announcement.</p><a class="link-arrow" href="#amount" data-pick="Contests &amp; prizes" data-pick-target="#allocation">Sponsor a prize</a></div>
+      <div class="card"><div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#briefcase"></use></svg></div><h3>Fund a role</h3><p>Underwrite a clinical reviewer or writer for a quarter and be credited on the guides they review.</p><a class="link-arrow" href="#amount" data-pick="Hiring talent" data-pick-target="#allocation">Fund a role</a></div>
+      <div class="card"><div class="icon-tile sky"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#megaphone"></use></svg></div><h3>Back outreach</h3><p>Help us reach communities who most need to know where to go for care.</p><a class="link-arrow" href="#amount" data-pick="Promotion &amp; marketing" data-pick-target="#allocation">Back outreach</a></div>
+      <div class="card"><div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#handheart"></use></svg></div><h3>Give time, not money</h3><p>Share dr.clinic, suggest a topic, report an error or volunteer your expertise.</p><a class="link-arrow" href="/careers/">Get involved</a></div>
+    </div>
+  </div>
+</section>
+{% include faq.html %}
