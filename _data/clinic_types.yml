@@ -1,0 +1,136 @@
+- name: Primary care practice
+  icon: stetho
+  best_for: "Checkups, ongoing conditions, prescriptions, referrals and preventive care."
+  services: "Physical exams, vaccines, screening tests, chronic-disease management, minor procedures."
+  cost: "$–$$"
+  wait: "Days to weeks for routine visits; some offer same-day slots."
+  ask: "Are you accepting new patients, and can I message the care team between visits?"
+  need: primary-care
+- name: Walk-in clinic
+  icon: clock
+  best_for: "Minor illnesses and injuries when you cannot see your own doctor."
+  services: "Colds, sore throats, minor cuts, rashes, urinary symptoms, simple prescriptions."
+  cost: "$"
+  wait: "Usually under 1–2 hours; first come, first served."
+  ask: "Will you send a visit summary to my regular doctor?"
+  need: primary-care
+- name: Urgent care center
+  icon: hospital
+  best_for: "Same-day problems that are not life-threatening."
+  services: "Sprains, simple fractures, stitches, X-rays, rapid tests, IV fluids at some centers."
+  cost: "$$"
+  wait: "Often under an hour; many show live wait times online."
+  ask: "Do you have X-ray and lab testing on site today?"
+  need: primary-care
+- name: Retail or pharmacy clinic
+  icon: pill
+  best_for: "Quick, simple needs: vaccines, minor infections, health screenings."
+  services: "Flu shots, travel vaccines, strep tests, blood pressure checks, minor ailments."
+  cost: "$"
+  wait: "Minutes to an hour; online booking common."
+  ask: "Which conditions can you treat here, and which need a doctor?"
+  need: primary-care
+- name: Telehealth service
+  icon: video
+  best_for: "Advice, minor illnesses, mental-health follow-ups and refills without travel."
+  services: "Video or phone visits, e-prescriptions, lab orders, therapy sessions."
+  cost: "$–$$"
+  wait: "Often same day or within minutes."
+  ask: "Is the clinician licensed where I live, and how do follow-ups work?"
+  need: telehealth
+- name: Community health center
+  icon: handheart
+  best_for: "Affordable primary care, often on a sliding fee scale."
+  services: "Primary care, dental, mental health, pharmacy and social support in one place."
+  cost: "$ (income-based)"
+  wait: "Varies; ask about same-day slots."
+  ask: "Do you offer a sliding scale or help with costs?"
+  need: primary-care
+- name: Dental clinic
+  icon: tooth
+  best_for: "Teeth and gums: checkups, cleaning, pain and repairs."
+  services: "Exams, X-rays, fillings, root canals, crowns, implants, orthodontics, emergency dental."
+  cost: "$–$$$"
+  wait: "Routine visits days to weeks; many keep emergency slots."
+  ask: "Can I get a written treatment plan with itemised costs?"
+  need: dental
+- name: Eye clinic
+  icon: eye
+  best_for: "Eye exams, glasses and contacts, eye disease and surgery."
+  services: "Vision tests, glaucoma and retina checks, cataract surgery, laser vision correction."
+  cost: "$–$$$"
+  wait: "Days to weeks; urgent eye problems often seen same day."
+  ask: "Is this an optometrist or an ophthalmologist, and which do I need?"
+  need: eye-care
+- name: Dermatology clinic
+  icon: skin
+  best_for: "Skin, hair and nail conditions and skin cancer checks."
+  services: "Mole mapping, biopsies, acne and eczema treatment, cosmetic dermatology."
+  cost: "$$–$$$"
+  wait: "Often weeks; urgent mole referrals are prioritised."
+  ask: "Will a board-certified dermatologist see me, or another clinician?"
+  need: dermatology
+- name: Physiotherapy clinic
+  icon: pulse
+  best_for: "Pain, injury and movement problems."
+  services: "Assessment, exercise programs, manual therapy, post-surgery rehabilitation."
+  cost: "$–$$ per session"
+  wait: "Usually days."
+  ask: "How many sessions do you expect, and what will I do at home between them?"
+  need: physiotherapy
+- name: Mental-health clinic
+  icon: brain
+  best_for: "Therapy, psychiatric assessment and medicine management."
+  services: "CBT and other talking therapies, psychiatry, group programs, crisis plans."
+  cost: "$–$$$"
+  wait: "Days to months; telehealth options are often faster."
+  ask: "Which therapy approaches do you use, and what are the clinician's qualifications?"
+  need: mental-health
+- name: Women's health clinic
+  icon: women
+  best_for: "Pregnancy, contraception, gynecology and menopause care."
+  services: "Prenatal care, ultrasound, cervical screening, IUD and implant fitting, menopause care."
+  cost: "$–$$"
+  wait: "Days to weeks; urgent pregnancy concerns seen quickly."
+  ask: "Who will I see at each visit, and who do I call out of hours?"
+  need: womens-health
+- name: Pediatric clinic
+  icon: child
+  best_for: "Babies, children and teens."
+  services: "Well-child visits, vaccines, development checks, sick visits, school forms."
+  cost: "$–$$"
+  wait: "Same-day sick slots are common."
+  ask: "Is there a nurse advice line for evenings and weekends?"
+  need: pediatrics
+- name: Fertility clinic
+  icon: baby
+  best_for: "Trying to conceive, IVF and fertility preservation."
+  services: "Fertility testing, IUI, IVF, egg and embryo freezing, donor programs."
+  cost: "$$$"
+  wait: "Weeks for a first consultation."
+  ask: "Can you share your published success rates for patients like me?"
+  need: fertility
+- name: Diagnostic lab or imaging center
+  icon: flask
+  best_for: "Blood tests, scans and health-check packages."
+  services: "Blood and urine tests, X-ray, ultrasound, CT, MRI, mammograms."
+  cost: "$–$$$"
+  wait: "Same day to a few weeks for scans."
+  ask: "Who reviews my results with me, and how quickly?"
+  need: diagnostics
+- name: Specialist outpatient clinic
+  icon: hospital
+  best_for: "Expert care after a referral."
+  services: "Cardiology, neurology, gastroenterology, orthopedics and other specialties."
+  cost: "$$–$$$"
+  wait: "Weeks to months, depending on urgency."
+  ask: "What should I do while I wait, and who do I call if things get worse?"
+  need: specialist
+- name: International hospital (treatment abroad)
+  icon: globe
+  best_for: "Planned procedures where cost or waiting time is better abroad."
+  services: "Joint replacement, dental work, cardiac procedures, IVF, cosmetic surgery."
+  cost: "Varies widely"
+  wait: "Often short once travel is arranged."
+  ask: "Which international accreditation do you hold, and who handles complications after I return home?"
+  need: treatment-abroad

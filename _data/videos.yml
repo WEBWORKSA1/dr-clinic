@@ -1,0 +1,60 @@
+- id: TRj3FKiVFGI
+  title: "Where to go: emergency room vs. urgent care vs. primary care"
+  channel: "University of Maryland Medical System"
+  topic: "Care navigation"
+  desc: "A clear walkthrough of which setting fits which problem — the decision every patient faces first."
+  related: /find-care/
+- id: eHnlKwk39nQ
+  title: "How to talk to your doctor"
+  channel: "NPR Life Kit"
+  topic: "Care navigation"
+  desc: "Choosing a provider, preparing for visits, asking about a diagnosis and getting a second opinion."
+  related: /tools/visit-prep/
+- id: rR1ea6DsGqc
+  title: "Do you really need to check your blood pressure at home?"
+  channel: "Cleveland Clinic"
+  topic: "Heart health"
+  desc: "Why home readings matter and how to make them accurate."
+  related: /tools/blood-pressure/
+- id: pp71ljXL640
+  title: "Can you reverse type 2 diabetes?"
+  channel: "Cleveland Clinic"
+  topic: "Diabetes"
+  desc: "What remission means, who can achieve it and how."
+  related: /health/prediabetes-type-2-diabetes/
+- id: s2lwUIKsRWg
+  title: "Mayo Clinic Minute: tips for better sleep"
+  channel: "Mayo Clinic"
+  topic: "Sleep"
+  desc: "Sleep-hygiene basics that help most adults get seven hours or more."
+  related: /health/sleep-better/
+- id: lu-pMXDZ8IA
+  title: "Mayo Clinic Minute: signs of a sleep disorder"
+  channel: "Mayo Clinic"
+  topic: "Sleep"
+  desc: "When snoring and daytime tiredness may point to sleep apnea."
+  related: /tools/sleep-cycle/
+- id: zd-7rvZCYvA
+  title: "Relax with deep breathing"
+  channel: "Cleveland Clinic"
+  topic: "Mental wellbeing"
+  desc: "A short guided breathing technique you can use anywhere."
+  related: /health/stress-anxiety/
+- id: zSgmledxFe8
+  title: "Official Hands-Only CPR instructional video"
+  channel: "American Heart Association (Hands-Only CPR)"
+  topic: "First aid"
+  desc: "Two steps that can save a life when an adult collapses: call, then push hard and fast."
+  related: /find-care/
+- id: IsgLivAD2FE
+  title: "How to properly wash your hands"
+  channel: "HSE Ireland"
+  topic: "Prevention"
+  desc: "The full hand-washing technique that removes germs best."
+  related: /health/cold-flu-covid-allergies/
+- id: ZnSjFr6J9HI
+  title: "How to handrub with an alcohol-based formulation"
+  channel: "World Health Organization (WHO)"
+  topic: "Prevention"
+  desc: "WHO's step-by-step method for hand sanitiser."
+  related: /health/cold-flu-covid-allergies/

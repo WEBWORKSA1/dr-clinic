@@ -1,0 +1,16 @@
+- {id: primary-care, name: "Family doctor / primary care", icon: stetho, hint: "Checkups, ongoing conditions, referrals"}
+- {id: dental, name: "Dentist", icon: tooth, hint: "Checkups, pain, implants, braces"}
+- {id: eye-care, name: "Eye care", icon: eye, hint: "Eye exams, vision changes, LASIK"}
+- {id: dermatology, name: "Skin (dermatology)", icon: skin, hint: "Moles, acne, rashes, hair"}
+- {id: womens-health, name: "Women's health / OB-GYN", icon: women, hint: "Pregnancy, periods, menopause"}
+- {id: mental-health, name: "Mental health", icon: brain, hint: "Therapy, psychiatry, counselling"}
+- {id: physiotherapy, name: "Physiotherapy", icon: pulse, hint: "Injury rehab, back and joint pain"}
+- {id: orthopedics, name: "Bones & joints (orthopedics)", icon: bone, hint: "Knees, hips, spine, sports injuries"}
+- {id: cardiology, name: "Heart (cardiology)", icon: heart, hint: "Blood pressure, chest symptoms"}
+- {id: pediatrics, name: "Child health (pediatrics)", icon: child, hint: "Babies, children, teens"}
+- {id: fertility, name: "Fertility / IVF", icon: baby, hint: "Trying to conceive, egg freezing"}
+- {id: aesthetic, name: "Cosmetic & aesthetic", icon: sparkle, hint: "Skin treatments, cosmetic surgery"}
+- {id: diagnostics, name: "Lab tests & imaging", icon: flask, hint: "Blood tests, scans, health checks"}
+- {id: telehealth, name: "Online doctor (telehealth)", icon: video, hint: "Video visits, refills, advice"}
+- {id: treatment-abroad, name: "Treatment abroad", icon: globe, hint: "Compare clinics in other countries"}
+- {id: specialist, name: "Another specialist", icon: hospital, hint: "Any other specialty"}

@@ -1,0 +1,15 @@
+- {id: bmi, name: "BMI calculator", url: "/tools/bmi/", desc: "Body mass index with your healthy-weight range.", category: "Body & weight", icon: scale}
+- {id: calories, name: "Calorie needs calculator", url: "/tools/calories/", desc: "BMR and maintenance calories by activity level.", category: "Body & weight", icon: flame}
+- {id: bodyfat, name: "Body fat calculator", url: "/tools/body-fat/", desc: "US Navy tape-measure method.", category: "Body & weight", icon: ruler}
+- {id: healthyweight, name: "Healthy weight range", url: "/tools/healthy-weight/", desc: "A realistic range for your height.", category: "Body & weight", icon: scale}
+- {id: whtr, name: "Waist-to-height ratio", url: "/tools/waist-to-height/", desc: "A simple check of central weight.", category: "Body & weight", icon: ruler}
+- {id: bp, name: "Blood pressure checker", url: "/tools/blood-pressure/", desc: "Understand a reading and log your trend.", category: "Heart & vitals", icon: heart}
+- {id: heartrate, name: "Heart rate zones", url: "/tools/heart-rate-zones/", desc: "Target heart rate for exercise.", category: "Heart & vitals", icon: pulse}
+- {id: temp, name: "Fever and temperature", url: "/tools/temperature/", desc: "Convert °C/°F and know when to call.", category: "Heart & vitals", icon: thermo}
+- {id: duedate, name: "Due date calculator", url: "/tools/due-date/", desc: "Due date, weeks pregnant and key dates.", category: "Pregnancy & fertility", icon: baby}
+- {id: ovulation, name: "Ovulation calculator", url: "/tools/ovulation/", desc: "Fertile window for your next 3 cycles.", category: "Pregnancy & fertility", icon: calendar}
+- {id: water, name: "Water intake calculator", url: "/tools/water-intake/", desc: "Daily fluids for your activity and climate.", category: "Daily habits", icon: droplet}
+- {id: sleep, name: "Sleep cycle calculator", url: "/tools/sleep-cycle/", desc: "Best times to go to bed or wake up.", category: "Daily habits", icon: moonsleep}
+- {id: visitprep, name: "Visit prep builder", url: "/tools/visit-prep/", desc: "A printable sheet of symptoms and questions.", category: "Visits & records", icon: clipboard}
+- {id: journal, name: "Symptom journal", url: "/tools/symptom-journal/", desc: "Track symptoms privately and export them.", category: "Visits & records", icon: notebook}
+- {id: meds, name: "Medication schedule", url: "/tools/medication-schedule/", desc: "A printable daily medicine timetable.", category: "Visits & records", icon: pill}

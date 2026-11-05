@@ -1,0 +1,204 @@
+- name: Family medicine / general practice
+  aka: "GP, family doctor, primary care physician"
+  treats: "Everyday illnesses, checkups, screenings, vaccines, long-term conditions such as high blood pressure and diabetes, and referrals."
+  when: "Your first stop for almost anything that is not an emergency."
+  areas: general
+  need: primary-care
+- name: Internal medicine
+  aka: "Internist"
+  treats: "Adult medicine, especially people with several long-term conditions at once."
+  when: "Complex adult health needs or as an adult primary care doctor."
+  areas: general
+  need: primary-care
+- name: Pediatrics
+  aka: "Pediatrician, children's doctor"
+  treats: "Babies, children and teens: growth, development, vaccines, infections and childhood conditions."
+  when: "Routine child health and most childhood illnesses."
+  areas: child
+  need: pediatrics
+- name: Obstetrics and gynecology
+  aka: "OB-GYN, women's health"
+  treats: "Pregnancy, birth, contraception, periods, pelvic pain, menopause and cervical screening."
+  when: "Pregnancy care, gynecological symptoms or routine women's health visits."
+  areas: women
+  need: womens-health
+- name: Cardiology
+  aka: "Heart specialist"
+  treats: "Heart disease, abnormal rhythms, heart failure, hard-to-control blood pressure and high cholesterol."
+  when: "After a referral for chest symptoms, palpitations or an abnormal ECG. Chest pain right now is an emergency."
+  areas: heart
+  need: cardiology
+- name: Dermatology
+  aka: "Skin specialist"
+  treats: "Moles and skin cancer checks, acne, eczema, psoriasis, rashes, hair and nail problems."
+  when: "A changing mole, a rash that will not settle, or persistent acne."
+  areas: skin
+  need: dermatology
+- name: Endocrinology
+  aka: "Hormone specialist"
+  treats: "Diabetes, thyroid disorders, osteoporosis, adrenal and pituitary problems, and other hormone conditions."
+  when: "Diabetes or thyroid disease that needs specialist management."
+  areas: hormones
+  need: specialist
+- name: Gastroenterology
+  aka: "GI specialist, gut doctor"
+  treats: "Reflux, ulcers, IBS, inflammatory bowel disease, liver disease, and colonoscopy for bowel screening."
+  when: "Ongoing gut symptoms, blood in stool, or bowel cancer screening."
+  areas: gut
+  need: specialist
+- name: Pulmonology
+  aka: "Lung specialist, respiratory medicine"
+  treats: "Asthma, COPD, chronic cough, lung nodules, sleep apnea and other breathing problems."
+  when: "A cough lasting more than a few weeks or breathing problems that are not controlled."
+  areas: lungs
+  need: specialist
+- name: Nephrology
+  aka: "Kidney specialist"
+  treats: "Chronic kidney disease, kidney-related high blood pressure, dialysis and transplant care."
+  when: "Abnormal kidney blood tests or protein in the urine."
+  areas: kidney
+  need: specialist
+- name: Neurology
+  aka: "Brain and nerve specialist"
+  treats: "Migraine, epilepsy, stroke recovery, multiple sclerosis, Parkinson's disease, nerve pain and memory problems."
+  when: "Frequent headaches, seizures, numbness or memory changes. Sudden stroke signs need emergency care."
+  areas: brain
+  need: specialist
+- name: Psychiatry
+  aka: "Psychiatrist"
+  treats: "Depression, anxiety, bipolar disorder, ADHD, psychosis and other mental-health conditions, including medicines."
+  when: "When you may need a diagnosis or medicine for your mental health."
+  areas: mind
+  need: mental-health
+- name: Psychology and counselling
+  aka: "Therapist, psychologist, counsellor"
+  treats: "Talking therapies such as CBT for anxiety, depression, stress, grief, trauma and relationship difficulties."
+  when: "Low mood, worry or stress that affects daily life."
+  areas: mind
+  need: mental-health
+- name: Orthopedics
+  aka: "Orthopedic surgeon, bone and joint specialist"
+  treats: "Fractures, arthritis, joint replacement, spine problems, ligament and tendon injuries."
+  when: "A joint injury that does not improve, or arthritis that limits daily life."
+  areas: bones
+  need: orthopedics
+- name: Rheumatology
+  aka: "Joint and autoimmune specialist"
+  treats: "Rheumatoid arthritis, lupus, gout, ankylosing spondylitis and other inflammatory conditions."
+  when: "Swollen, stiff joints, especially in the morning, or a suspected autoimmune condition."
+  areas: bones
+  need: specialist
+- name: Physiotherapy
+  aka: "Physical therapist, physio"
+  treats: "Back and neck pain, sports injuries, recovery after surgery, balance and mobility problems."
+  when: "Pain or stiffness that limits movement, or rehabilitation after an injury. In many places you can book directly."
+  areas: bones
+  need: physiotherapy
+- name: Ophthalmology
+  aka: "Eye surgeon, eye doctor (MD)"
+  treats: "Cataracts, glaucoma, retinal disease, eye injuries and eye surgery including LASIK."
+  when: "Eye disease needing treatment or surgery. Sudden vision loss is an emergency."
+  areas: eyes
+  need: eye-care
+- name: Optometry
+  aka: "Optometrist, eye exam"
+  treats: "Eye exams, glasses and contact lens prescriptions, and screening for eye disease."
+  when: "Routine eye checks or blurry vision."
+  areas: eyes
+  need: eye-care
+- name: Ear, nose and throat (ENT)
+  aka: "Otolaryngology"
+  treats: "Hearing loss, chronic sinus problems, tonsils, voice problems, dizziness and snoring."
+  when: "Ongoing ear, sinus or throat problems."
+  areas: ears
+  need: specialist
+- name: Urology
+  aka: "Urologist"
+  treats: "Kidney stones, urinary problems, prostate conditions and male reproductive health."
+  when: "Blood in urine, trouble passing urine or recurring urinary infections."
+  areas: kidney
+  need: specialist
+- name: Allergy and immunology
+  aka: "Allergist"
+  treats: "Hay fever, food and drug allergies, asthma triggers, hives and immune deficiencies."
+  when: "Allergies that affect daily life, or reactions you want tested."
+  areas: lungs skin
+  need: specialist
+- name: Oncology
+  aka: "Cancer specialist"
+  treats: "Diagnosis and treatment of cancer, including chemotherapy, immunotherapy and survivorship care."
+  when: "After a cancer diagnosis or referral for a suspected cancer."
+  areas: cancer
+  need: specialist
+- name: Hematology
+  aka: "Blood specialist"
+  treats: "Anemia, bleeding and clotting disorders, and blood cancers."
+  when: "Abnormal blood counts or unexplained bruising or clots."
+  areas: blood
+  need: specialist
+- name: Infectious disease
+  aka: "ID specialist, travel medicine"
+  treats: "Complex or recurring infections, HIV, tuberculosis and travel-related illness."
+  when: "An infection that is not responding to treatment, or advice before risky travel."
+  areas: general
+  need: specialist
+- name: General dentistry
+  aka: "Dentist"
+  treats: "Checkups and cleaning, fillings, gum disease, root canals, crowns and tooth pain."
+  when: "Routine checkups, toothache, bleeding gums or a broken tooth."
+  areas: teeth
+  need: dental
+- name: Orthodontics
+  aka: "Braces, clear aligners"
+  treats: "Crooked teeth and bite problems in children and adults."
+  when: "Concerns about how teeth line up or how the jaws meet."
+  areas: teeth
+  need: dental
+- name: Podiatry
+  aka: "Foot doctor, chiropody"
+  treats: "Heel pain, ingrown toenails, diabetic foot care and foot deformities."
+  when: "Foot pain or any foot sore if you have diabetes."
+  areas: bones
+  need: specialist
+- name: Sports medicine
+  aka: "Sports physician"
+  treats: "Sports injuries, exercise-related pain and safe return to activity."
+  when: "An injury from training or play, or advice on starting exercise safely."
+  areas: bones
+  need: orthopedics
+- name: Geriatrics
+  aka: "Older-adult medicine"
+  treats: "Falls, memory problems, frailty and managing many medicines in older age."
+  when: "Complex health needs in later life."
+  areas: general
+  need: primary-care
+- name: Reproductive endocrinology and infertility
+  aka: "Fertility specialist, IVF"
+  treats: "Difficulty conceiving, IVF, egg freezing, recurrent miscarriage and hormone-related fertility problems."
+  when: "Trying to conceive for 12 months (or 6 months if 35 or older) without success."
+  areas: women
+  need: fertility
+- name: Plastic surgery and aesthetic medicine
+  aka: "Cosmetic surgeon, aesthetic clinic"
+  treats: "Reconstructive surgery, cosmetic procedures, injectables and laser skin treatments."
+  when: "Reconstruction after injury or surgery, or a cosmetic goal — always check credentials."
+  areas: skin
+  need: aesthetic
+- name: Sleep medicine
+  aka: "Sleep specialist"
+  treats: "Sleep apnea, insomnia, narcolepsy and restless legs."
+  when: "Loud snoring with pauses in breathing, or long-term trouble sleeping."
+  areas: brain lungs
+  need: specialist
+- name: Radiology and diagnostic imaging
+  aka: "X-ray, ultrasound, CT, MRI"
+  treats: "Medical imaging that helps other doctors diagnose and monitor conditions."
+  when: "Usually after a request from your doctor; some private centers offer self-referral."
+  areas: general
+  need: diagnostics
+- name: Dietetics and nutrition
+  aka: "Registered dietitian"
+  treats: "Nutrition plans for diabetes, kidney and heart disease, food allergies, digestive problems and healthy weight."
+  when: "When food choices are part of managing a condition."
+  areas: gut general
+  need: specialist
