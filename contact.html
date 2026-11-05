@@ -1,0 +1,38 @@
+---
+title: "Contact dr.clinic"
+short: "Contact"
+description: "Contact the dr.clinic team about clinic matching, corrections, partnerships, advertising, press or privacy requests."
+eyebrow: "Contact"
+heading: "Contact us"
+lede: "We read every message and usually reply within 1–2 business days. For medical emergencies, call your local emergency number — we cannot respond to urgent medical questions."
+ads: false
+---
+{% include page-hero.html %}
+<div class="container split" style="padding-top:30px">
+  <form class="form-card form" data-form="contact" data-subject="Contact form — dr.clinic">
+    <div class="form-row">
+      <label class="field"><span>Name *</span><input type="text" name="name" required autocomplete="name"></label>
+      <label class="field"><span>Email *</span><input type="email" name="email" required autocomplete="email"></label>
+    </div>
+    <label class="field"><span>Topic *</span><select name="topic" required><option value="">Choose a topic</option><option>General question</option><option>My clinic match request</option><option>Correction or feedback</option><option>Clinic partnership</option><option>Advertising or sponsorship</option><option>Contests and prizes</option><option>Careers</option><option>Press</option><option>Privacy or data request</option><option>Website or domain acquisition</option><option>Other</option></select></label>
+    <label class="field"><span>Message *</span><textarea name="message" required placeholder="How can we help? Please do not include detailed medical information."></textarea></label>
+    <label class="check"><input type="checkbox" name="consent" value="Yes" required><span>I agree that dr.clinic may use these details to reply to me, as described in the <a href="/privacy/">privacy policy</a>. *</span></label>
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="form" value="Contact">
+    <button class="btn btn-accent btn-lg" type="submit">Send message</button>
+    <p class="form-status" data-status aria-live="polite"></p>
+  </form>
+  <aside>
+    <div class="card">
+      <h2 style="font-size:1.3rem">Other ways to reach us</h2>
+      <p><a href="/contact/" data-mail="Inquiry from dr.clinic" class="btn btn-ghost"><svg class="ico sm" aria-hidden="true"><use href="/assets/img/icons.svg#mail"></use></svg> Email us from your mail app</a></p>
+      <p class="micro">Opens your email app with our address filled in.</p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+      <p><strong>Interested in this website, the domain name, sponsorship, advertising or a partnership?</strong></p>
+      <p><a class="link-arrow" href="{{ site.broker_url }}" target="_blank" rel="noopener">Contact us here</a></p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+      <p><strong>Clinics:</strong> <a href="/for-clinics/">apply to join the network</a>.<br><strong>Patients:</strong> <a href="/get-matched/">request a free match</a>.</p>
+    </div>
+    <div style="margin-top:18px">{% include emergency.html %}</div>
+  </aside>
+</div>
