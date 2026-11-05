@@ -1,0 +1,34 @@
+---
+title: "Free health calculators and tools"
+short: "Health tools"
+description: "15 free, private health tools: BMI, calories, body fat, blood pressure, heart rate zones, due date, ovulation, sleep, fever, water, visit prep, symptom journal and medication schedule."
+eyebrow: "Health tools"
+heading: "Free health calculators and tools"
+lede: "Fifteen tools that run entirely in your browser. Nothing you enter is uploaded or stored on our servers."
+---
+{% include page-hero.html %}
+<div class="container" data-filter-scope style="padding-top:28px">
+  <div class="filter-bar">
+    <label class="sr-only" for="tool-q">Search tools</label>
+    <input id="tool-q" type="search" placeholder="Search tools" data-filter-input>
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button type="button" class="chip alt" data-filter-chip="body" aria-pressed="false">Body &amp; weight</button>
+      <button type="button" class="chip alt" data-filter-chip="heart" aria-pressed="false">Heart &amp; vitals</button>
+      <button type="button" class="chip alt" data-filter-chip="pregnancy" aria-pressed="false">Pregnancy &amp; fertility</button>
+      <button type="button" class="chip alt" data-filter-chip="daily" aria-pressed="false">Daily habits</button>
+      <button type="button" class="chip alt" data-filter-chip="visits" aria-pressed="false">Visits &amp; records</button>
+    </div>
+  </div>
+  <div class="grid cards-3">
+    {% for t in site.data.tools %}
+    <a class="card card-link tool-mini" href="{{ t.url }}" data-filter-item data-tags="{{ t.category | downcase | split: ' ' | first }}"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#{{ t.icon }}"></use></svg><span class="chip alt" style="margin-top:10px">{{ t.category }}</span><h3>{{ t.name }}</h3><p>{{ t.desc }}</p><span class="link-arrow">Open tool</span></a>
+    {% endfor %}
+  </div>
+  <p class="empty" data-filter-empty hidden>No tools match that search.</p>
+  <section class="section tight narrow" style="margin-inline:0">
+    <h2>How to use these tools well</h2>
+    <p>Calculators turn standard formulas into quick estimates. They are useful for tracking trends and starting conversations with your clinician, but they cannot diagnose a condition or replace an examination. Where a formula is known to be less accurate for some groups — for example BMI in very muscular people, or age-based heart-rate maximums — we say so next to the result.</p>
+    <p>Your entries stay on your device. Tools that save information, such as the blood pressure log, symptom journal and medication schedule, use your browser's local storage, so clearing your browser data deletes them.</p>
+  </section>
+  {% include lead-cta.html %}
+</div>

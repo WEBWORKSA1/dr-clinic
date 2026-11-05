@@ -1,0 +1,35 @@
+---
+title: "Health video library: short explainers from trusted sources"
+short: "Videos"
+description: "Hand-picked health videos from Mayo Clinic, Cleveland Clinic, WHO, NPR, the American Heart Association and more — on choosing care, blood pressure, sleep, stress, CPR and hygiene."
+eyebrow: "Video library"
+heading: "Health video library"
+lede: "Short, reliable explainers from leading health organisations. Videos load in YouTube's privacy-enhanced mode only when you press play."
+---
+{% include page-hero.html %}
+<div class="container" data-filter-scope style="padding-top:28px">
+  <div class="chips" style="margin-bottom:22px" role="group" aria-label="Filter by topic">
+    <button type="button" class="chip alt" data-filter-chip="care-navigation" aria-pressed="false">Care navigation</button>
+    <button type="button" class="chip alt" data-filter-chip="heart-health" aria-pressed="false">Heart health</button>
+    <button type="button" class="chip alt" data-filter-chip="sleep" aria-pressed="false">Sleep</button>
+    <button type="button" class="chip alt" data-filter-chip="mental-wellbeing" aria-pressed="false">Mental wellbeing</button>
+    <button type="button" class="chip alt" data-filter-chip="diabetes" aria-pressed="false">Diabetes</button>
+    <button type="button" class="chip alt" data-filter-chip="first-aid" aria-pressed="false">First aid</button>
+    <button type="button" class="chip alt" data-filter-chip="prevention" aria-pressed="false">Prevention</button>
+  </div>
+  <div class="grid cards-3">
+    {% for v in site.data.videos %}
+    <article class="video-card" data-filter-item data-tags="{{ v.topic | slugify }}">
+      <button class="yt" type="button" data-yt="{{ v.id }}" data-title="{{ v.title | escape }}" aria-label="Play video: {{ v.title | escape }}"><img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#play"></use></svg></span></span></button>
+      <h3>{{ v.title }}</h3>
+      <p class="micro" style="margin-top:0">{{ v.channel }} · {{ v.topic }}</p>
+      <p>{{ v.desc }} <a href="{{ v.related }}">Related on dr.clinic</a></p>
+    </article>
+    {% endfor %}
+  </div>
+  <section class="section tight narrow" style="margin-inline:0">
+    <h2>About these videos</h2>
+    <p>We select videos from hospitals, public health agencies, professional societies and established public broadcasters, and we check that each one matches current mainstream guidance. Videos are embedded with YouTube's standard player; all rights remain with their creators. Want to suggest a video or submit your own explainer? Enter our <a href="/contests/">Explain It Simply contest</a>.</p>
+  </section>
+  {% include lead-cta.html %}
+</div>

@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+[{% for d in site.health %}{"t":{{ d.title | jsonify }},"u":{{ d.url | jsonify }},"d":{{ d.description | jsonify }},"k":{{ d.category | append: " " | append: d.keywords | jsonify }},"y":"Guide"},
+{% endfor %}{% for t in site.data.tools %}{"t":{{ t.name | jsonify }},"u":{{ t.url | jsonify }},"d":{{ t.desc | jsonify }},"k":{{ t.category | append: " calculator tool" | jsonify }},"y":"Tool"},
+{% endfor %}{% for s in site.data.specialties %}{"t":{{ s.name | jsonify }},"u":{{ s.name | split: " " | first | downcase | prepend: "/specialists/?q=" | jsonify }},"d":{{ s.treats | jsonify }},"k":{{ s.aka | append: " " | append: s.areas | append: " specialist doctor" | jsonify }},"y":"Specialist"},
+{% endfor %}{% for c in site.data.clinic_types %}{"t":{{ c.name | jsonify }},"u":"/clinics/","d":{{ c.best_for | jsonify }},"k":{{ c.services | append: " clinic" | jsonify }},"y":"Clinic type"},
+{% endfor %}{% for p in site.pages %}{% if p.title and p.tool != true and p.search != false and p.sitemap != false and p.url != "/" %}{"t":{{ p.title | jsonify }},"u":{{ p.url | jsonify }},"d":{{ p.description | jsonify }},"k":"","y":"Page"},
+{% endif %}{% endfor %}{"t":"dr.clinic home","u":"/","d":"Find the right care, faster.","k":"home care navigator","y":"Page"}]

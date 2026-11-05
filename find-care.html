@@ -1,0 +1,85 @@
+---
+title: "Where should I go for care? ER, urgent care, telehealth or doctor"
+short: "Find care"
+description: "Answer three quick questions to see whether you need the emergency room, urgent care, a telehealth visit, your doctor, a pharmacist or a specialist."
+eyebrow: "Care navigator"
+heading: "Where should I go for care?"
+lede: "Answer three questions and we will suggest the right setting — plus what to bring. It takes about 30 seconds."
+faq:
+  - q: "When should I go to the emergency room instead of urgent care?"
+    a: "Go to the emergency department or call your emergency number for chest pain or pressure, trouble breathing, signs of stroke, severe bleeding, a seizure, fainting, severe burns, a serious head injury, a severe allergic reaction, or thoughts of harming yourself. Urgent care is for problems that need attention today but are not life-threatening."
+  - q: "Is urgent care cheaper than the emergency room?"
+    a: "For the same minor problem, urgent care and telehealth visits usually cost far less than an emergency department visit, and waits are usually shorter. Emergency departments are equipped and staffed for life-threatening problems, so use them when you need them."
+  - q: "Can I use telehealth for a new problem?"
+    a: "Yes, for many minor illnesses, rashes, urinary symptoms, medication questions and mental-health concerns. The clinician will tell you if you need an in-person exam, tests or emergency care."
+  - q: "What if I am not sure?"
+    a: "Call a nurse advice line if one is available to you — for example NHS 111 in England, 811 in most Canadian provinces, healthdirect on 1800 022 222 in Australia, or the nurse line on the back of many insurance cards. If in doubt about an emergency, call your emergency number."
+---
+{% include page-hero.html %}
+<div class="container narrow" style="padding-top:28px">
+  <div id="emergency">{% include emergency.html %}</div>
+
+  <form class="tool-panel" data-navigator style="margin-top:26px" novalidate>
+    <fieldset class="field">
+      <legend class="label">1. Do you have any of the emergency warning signs above?</legend>
+      <div class="choice-grid">
+        <label class="choice compact"><input type="radio" name="nv_emerg" value="yes"><span>Yes, or not sure</span></label>
+        <label class="choice compact"><input type="radio" name="nv_emerg" value="no"><span>No</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="field" style="margin-top:18px">
+      <legend class="label">2. How soon do you need care?</legend>
+      <div class="choice-grid">
+        <label class="choice compact"><input type="radio" name="nv_when" value="today"><span>Today</span></label>
+        <label class="choice compact"><input type="radio" name="nv_when" value="soon"><span>In the next few days</span></label>
+        <label class="choice compact"><input type="radio" name="nv_when" value="routine"><span>It can wait (routine)</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="field" style="margin-top:18px">
+      <legend class="label">3. What best describes it?</legend>
+      <div class="choice-grid">
+        <label class="choice"><input type="radio" name="nv_issue" value="minor"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#thermo"></use></svg>Minor illness or injury<small>Fever, cough, sprain, cut</small></span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="chronic"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#heart"></use></svg>Ongoing condition<small>Diabetes, blood pressure, asthma</small></span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="refill"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#pill"></use></svg>Medicine or refill<small>Questions, renewals</small></span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="checkup"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#clipboard"></use></svg>Checkup or screening<small>Physical, vaccines, tests</small></span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="mental"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#brain"></use></svg>Mental health<small>Mood, anxiety, stress</small></span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="dental"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#tooth"></use></svg>Teeth or gums</span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="eye"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#eye"></use></svg>Eyes or vision</span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="skin"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#skin"></use></svg>Skin, mole or rash</span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="women"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#women"></use></svg>Pregnancy or women's health</span></label>
+        <label class="choice"><input type="radio" name="nv_issue" value="child"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#child"></use></svg>It's for a child</span></label>
+      </div>
+    </fieldset>
+    <div class="tool-actions"><button class="btn btn-accent btn-lg" type="submit">Show my recommendation</button></div>
+    <div class="result" data-nav-result hidden aria-live="polite"></div>
+  </form>
+
+  <h2>Care settings compared</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Setting</th><th>Best for</th><th>Typical wait</th><th>Relative cost</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Emergency department</strong></td><td>Life-threatening or limb-threatening problems</td><td>Triage by severity; minor problems can wait hours</td><td>Highest</td></tr>
+        <tr><td><strong>Urgent care</strong></td><td>Same-day, non-life-threatening illness and injury; X-rays at many centers</td><td>Often under an hour</td><td>Moderate</td></tr>
+        <tr><td><strong>Walk-in or retail clinic</strong></td><td>Simple infections, vaccines, minor ailments</td><td>Minutes to an hour</td><td>Low</td></tr>
+        <tr><td><strong>Telehealth</strong></td><td>Advice, minor illness, refills, mental-health follow-ups</td><td>Often same day</td><td>Low</td></tr>
+        <tr><td><strong>Primary care</strong></td><td>Ongoing conditions, checkups, referrals, anything that can wait</td><td>Days to weeks</td><td>Low to moderate</td></tr>
+        <tr><td><strong>Pharmacist</strong></td><td>Medicine questions; minor ailments and emergency supplies in many regions</td><td>Minutes</td><td>Lowest</td></tr>
+        <tr><td><strong>Specialist</strong></td><td>Expert diagnosis and treatment, usually after a referral</td><td>Weeks to months</td><td>Moderate to high</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>Not sure? Call a nurse line.</strong> NHS 111 (England), 811 (most Canadian provinces, including Info-Santé in Québec), healthdirect 1800 022 222 (Australia), or the 24/7 nurse line printed on many insurance cards. Mental-health crisis: 988 in the US and Canada.</p>
+  </div>
+
+  <h2>Watch: choosing between the ER, urgent care and your doctor</h2>
+  {% assign v = site.data.videos[0] %}
+  <button class="yt" type="button" data-yt="{{ v.id }}" data-title="{{ v.title | escape }}" aria-label="Play video: {{ v.title | escape }}"><img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play"><span><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#play"></use></svg></span></span></button>
+  <p class="micro">Video: {{ v.channel }}. Shown in YouTube's privacy-enhanced mode; it loads only when you press play.</p>
+
+  {% include lead-cta.html %}
+  {% include med-note.html %}
+</div>
+{% include faq.html %}

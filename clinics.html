@@ -1,0 +1,65 @@
+---
+title: "Types of clinics explained — and how to choose a good one"
+short: "Clinics"
+description: "From walk-in and urgent care to dental, eye, fertility and international hospitals: what each type of clinic does, typical cost and wait, and a checklist for choosing well."
+eyebrow: "Clinic guide"
+heading: "Types of clinics, and how to choose one"
+lede: "Seventeen kinds of clinic, what each is best for, and a 12-point checklist that scores any clinic you are considering."
+---
+{% include page-hero.html %}
+<div class="container" style="padding-top:28px">
+  <div class="grid cards-3">
+    {% for c in site.data.clinic_types %}
+    <article class="card">
+      <div class="icon-tile"><svg class="ico" aria-hidden="true"><use href="/assets/img/icons.svg#{{ c.icon }}"></use></svg></div>
+      <h3>{{ c.name }}</h3>
+      <p><strong>Best for:</strong> {{ c.best_for }}</p>
+      <p><strong>Services:</strong> {{ c.services }}</p>
+      <p><strong>Cost:</strong> {{ c.cost }} · <strong>Wait:</strong> {{ c.wait }}</p>
+      <p><strong>Ask:</strong> “{{ c.ask }}”</p>
+      <a class="link-arrow" href="/get-matched/?need={{ c.need }}">Find one near me</a>
+    </article>
+    {% endfor %}
+  </div>
+
+  <section class="section">
+    <div class="split">
+      <div>
+        <h2>Score a clinic in one minute</h2>
+        <p>Tick everything that is true for the clinic you are considering. The most important safeguards count for more.</p>
+        <div class="tool-panel" data-score>
+          <div class="form">
+            <label class="check"><input type="checkbox" data-w="3"><span>Clinicians are licensed, and I can check their registration with the regulator</span></label>
+            <label class="check"><input type="checkbox" data-w="2"><span>The clinic is registered or accredited by the relevant authority</span></label>
+            <label class="check"><input type="checkbox" data-w="2"><span>Prices or a written estimate are given before treatment</span></label>
+            <label class="check"><input type="checkbox" data-w="2"><span>There is a clear plan for follow-up and complications</span></label>
+            <label class="check"><input type="checkbox" data-w="2"><span>No pressure to buy packages or extra treatments</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Accepts my insurance or explains self-pay options clearly</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Wait time is reasonable for my need</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Recent, independent reviews are mostly positive</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Staff communicate in a language I am comfortable with</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Location is accessible, or telehealth is available</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Has a privacy policy and handles records securely</span></label>
+            <label class="check"><input type="checkbox" data-w="1"><span>Will share visit notes with my regular doctor</span></label>
+          </div>
+          <div class="result" aria-live="polite"><p class="score-out" data-score-out>0%</p><p data-score-verdict></p></div>
+        </div>
+      </div>
+      <div>
+        <h2>Red flags to walk away from</h2>
+        <ul>
+          <li>Guaranteed results or “miracle” cures</li>
+          <li>Pressure to pay in full today or sign up for a package</li>
+          <li>No clear information about who will treat you, or their qualifications</li>
+          <li>Refusal to give a written estimate or to share your records</li>
+          <li>Reviews that all sound the same, or no independent reviews at all</li>
+          <li>Treatments that skip a proper consultation and consent discussion</li>
+        </ul>
+        <p>Planning treatment in another country? Read our <a href="/health/medical-tourism-checklist/">treatment-abroad checklist</a> first.</p>
+        <p>More: <a href="/health/choose-a-clinic/">How to choose a clinic — the full guide</a>.</p>
+      </div>
+    </div>
+  </section>
+  {% include lead-cta.html %}
+  {% include med-note.html %}
+</div>

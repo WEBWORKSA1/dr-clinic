@@ -1,0 +1,28 @@
+---
+title: "Health news pulse: today's headlines from NIH, FDA and ScienceDaily"
+short: "Health news"
+description: "An automatically refreshed feed of health and medical headlines from the US National Institutes of Health, the US Food and Drug Administration and ScienceDaily — plus how to read health news wisely."
+eyebrow: "Health news pulse"
+heading: "Health news pulse"
+lede: "Headlines from public health agencies and science news, refreshed automatically. Each links to the original publisher."
+---
+{% include page-hero.html %}
+<div class="container narrow" style="padding-top:28px">
+  <p class="micro">Last refreshed <time datetime="{{ site.data.news.updated }}" data-ago="{{ site.data.news.updated }}">{{ site.data.news.updated | date: "%B %-d, %Y" }}</time>.</p>
+  <ul class="news-list">
+    {% for n in site.data.news.items %}
+    <li><span class="chip alt">{{ n.source }}</span><div><a href="{{ n.link }}" target="_blank" rel="noopener nofollow">{{ n.title }}</a><small><time datetime="{{ n.date }}">{{ n.date | date: "%b %-d, %Y" }}</time></small></div></li>
+    {% endfor %}
+  </ul>
+
+  <h2 style="margin-top:48px">How to read health news wisely</h2>
+  <ol>
+    <li><strong>Check who was studied.</strong> Results in cells or animals often do not carry over to people. Look for human studies, ideally large ones.</li>
+    <li><strong>Relative versus absolute risk.</strong> “Doubles the risk” can mean going from 1 in 10,000 to 2 in 10,000. Ask what the actual numbers are.</li>
+    <li><strong>One study is not the final word.</strong> Strong conclusions usually rest on several studies pointing the same way, summarised in systematic reviews.</li>
+    <li><strong>Look for who paid.</strong> Funding and conflicts of interest are usually listed in the original paper.</li>
+    <li><strong>Talk before you change treatment.</strong> Never stop or change a prescribed medicine because of a headline — ask your clinician or pharmacist first.</li>
+  </ol>
+  <p class="micro">Headlines are selected automatically from public RSS feeds and are not endorsements. dr.clinic is not responsible for the content of external sites.</p>
+  {% include lead-cta.html %}
+</div>

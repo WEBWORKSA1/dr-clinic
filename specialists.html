@@ -1,0 +1,56 @@
+---
+title: "Which specialist do I need? 34 medical specialties explained"
+short: "Specialists"
+description: "Plain-language guide to 34 types of doctors and clinicians: what each treats, when to see them, and how to get matched with one."
+eyebrow: "Specialist finder"
+heading: "Which specialist do I need?"
+lede: "Search by symptom, body part or condition, or filter by area. Start with primary care if you are unsure — they can refer you to the right specialist."
+---
+{% include page-hero.html %}
+<div class="container" data-filter-scope style="padding-top:28px">
+  <div class="filter-bar">
+    <label class="sr-only" for="spec-q">Search specialists</label>
+    <input id="spec-q" type="search" placeholder="Search: e.g. knee, rash, anxiety, thyroid" data-filter-input data-filter-q>
+  </div>
+  <div class="chips" style="margin-bottom:24px" role="group" aria-label="Filter by area">
+    <button type="button" class="chip alt" data-filter-chip="general" aria-pressed="false">General</button>
+    <button type="button" class="chip alt" data-filter-chip="heart" aria-pressed="false">Heart</button>
+    <button type="button" class="chip alt" data-filter-chip="brain" aria-pressed="false">Brain &amp; nerves</button>
+    <button type="button" class="chip alt" data-filter-chip="mind" aria-pressed="false">Mental health</button>
+    <button type="button" class="chip alt" data-filter-chip="bones" aria-pressed="false">Bones &amp; joints</button>
+    <button type="button" class="chip alt" data-filter-chip="skin" aria-pressed="false">Skin</button>
+    <button type="button" class="chip alt" data-filter-chip="women" aria-pressed="false">Women</button>
+    <button type="button" class="chip alt" data-filter-chip="child" aria-pressed="false">Children</button>
+    <button type="button" class="chip alt" data-filter-chip="eyes" aria-pressed="false">Eyes</button>
+    <button type="button" class="chip alt" data-filter-chip="teeth" aria-pressed="false">Teeth</button>
+    <button type="button" class="chip alt" data-filter-chip="ears" aria-pressed="false">Ear, nose &amp; throat</button>
+    <button type="button" class="chip alt" data-filter-chip="lungs" aria-pressed="false">Lungs</button>
+    <button type="button" class="chip alt" data-filter-chip="gut" aria-pressed="false">Digestion</button>
+    <button type="button" class="chip alt" data-filter-chip="kidney" aria-pressed="false">Kidney &amp; urinary</button>
+    <button type="button" class="chip alt" data-filter-chip="hormones" aria-pressed="false">Hormones</button>
+    <button type="button" class="chip alt" data-filter-chip="cancer" aria-pressed="false">Cancer</button>
+    <button type="button" class="chip alt" data-filter-chip="blood" aria-pressed="false">Blood</button>
+  </div>
+  <div class="grid cards-3">
+    {% for s in site.data.specialties %}
+    <article class="card spec-card" data-filter-item data-tags="{{ s.areas }} {{ s.need }}" data-text="{{ s.name | downcase }} {{ s.aka | downcase }} {{ s.treats | downcase }} {{ s.when | downcase }}">
+      <h3>{{ s.name }}</h3>
+      <p class="micro" style="margin-top:0">Also called: {{ s.aka }}</p>
+      <dl><dt>Treats</dt><dd>{{ s.treats }}</dd><dt>When to see one</dt><dd>{{ s.when }}</dd></dl>
+      <a class="link-arrow" href="/get-matched/?need={{ s.need }}">Get matched</a>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="empty" data-filter-empty hidden>No specialties match that search. Try a simpler word, or <a href="/find-care/">use the care navigator</a>.</p>
+
+  <section class="section tight">
+    <div class="narrow" style="margin-inline:0">
+      <h2>Do I need a referral?</h2>
+      <p>It depends on where you live and how your care is paid for. Many public systems and some insurance plans require a referral from a primary care clinician before you can see a specialist. Others let you book directly, especially for physiotherapy, optometry, dentistry, mental-health therapy and some dermatology. If you are unsure, call your plan or ask the specialist's office before booking.</p>
+      <h3>Why primary care is still a good first step</h3>
+      <p>A primary care clinician can rule out common causes, order first tests, and send you to the right specialist with the information they need — which often makes the specialist visit faster and more useful.</p>
+    </div>
+  </section>
+  {% include lead-cta.html %}
+  {% include med-note.html %}
+</div>

@@ -1,0 +1,32 @@
+---
+title: "Health library: plain-language, sourced health guides"
+short: "Health library"
+description: "Clear guides to choosing care, preparing for appointments, understanding tests and managing common conditions — each with its sources listed."
+eyebrow: "Health library"
+heading: "Health library"
+lede: "Practical guides to the decisions patients face most, written in plain language and built on public guidance from WHO, CDC, NHS, NIH and medical societies."
+---
+{% include page-hero.html %}
+<div class="container" data-filter-scope style="padding-top:28px">
+  <div class="filter-bar">
+    <label class="sr-only" for="lib-q">Search guides</label>
+    <input id="lib-q" type="search" placeholder="Search guides" data-filter-input data-filter-q>
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button type="button" class="chip alt" data-filter-chip="care-navigation" aria-pressed="false">Care navigation</button>
+      <button type="button" class="chip alt" data-filter-chip="conditions" aria-pressed="false">Conditions</button>
+      <button type="button" class="chip alt" data-filter-chip="everyday-health" aria-pressed="false">Everyday health</button>
+    </div>
+  </div>
+  {% assign docs = site.health | sort: "title" %}
+  <div class="grid cards-3">
+    {% for d in docs %}
+    <a class="card card-link" href="{{ d.url }}" data-filter-item data-tags="{{ d.category | slugify }}" data-text="{{ d.title | downcase }} {{ d.description | downcase }} {{ d.keywords | downcase }}"><span class="chip">{{ d.category }}</span><h3>{{ d.title }}</h3><p>{{ d.description }}</p><span class="link-arrow">Read · {{ d.reading }} min</span></a>
+    {% endfor %}
+  </div>
+  <p class="empty" data-filter-empty hidden>No guides match that search.</p>
+  <section class="section tight narrow" style="margin-inline:0">
+    <h2>How we write these guides</h2>
+    <p>Each guide is written by the dr.clinic editorial team from public guidance published by health authorities and professional societies, and lists those sources at the end. We review guides at least once a year, and sooner when guidance changes. Read our <a href="/editorial-policy/">editorial policy</a> to see how we choose topics, handle corrections and keep advertising separate from content.</p>
+  </section>
+  {% include lead-cta.html %}
+</div>
